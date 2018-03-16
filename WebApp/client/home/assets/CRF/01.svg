@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>01</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-100.000000, -600.000000)">
+            <g id="01" transform="translate(100.000000, 600.000000)">
+                <circle id="Oval" stroke-opacity="0.12" stroke="#458DF1" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <circle id="Oval-2" stroke="#458DF1" stroke-width="4" cx="56" cy="56" r="6"></circle>
+                <circle id="Oval-2-Copy" stroke="#458DF1" stroke-width="4" cx="56" cy="104" r="6"></circle>
+                <circle id="Oval-2-Copy-2" stroke="#458DF1" stroke-width="4" cx="104" cy="104" r="6"></circle>
+                <circle id="Oval-2-Copy-3" stroke="#458DF1" stroke-width="4" cx="104" cy="56" r="6"></circle>
+                <circle id="Oval-2-Copy-4" stroke="#458DF1" stroke-width="4" cx="80" cy="80" r="6"></circle>
+                <rect id="Rectangle" fill="#458DF1" x="54" y="67" width="4" height="26" rx="2"></rect>
+                <rect id="Rectangle-Copy" fill="#458DF1" x="102" y="67" width="4" height="26" rx="2"></rect>
+                <rect id="Rectangle-Copy-2" fill="#458DF1" x="78" y="92" width="4" height="20" rx="2"></rect>
+                <rect id="Rectangle-Copy-3" fill="#458DF1" x="78" y="48" width="4" height="20" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

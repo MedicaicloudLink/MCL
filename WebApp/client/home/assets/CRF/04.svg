@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>04</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-121.000000, -1458.000000)" stroke="#458DF1">
+            <g id="04" transform="translate(121.000000, 1458.000000)">
+                <path d="M50.1856283,81.4592305 C54.6660201,89.1974948 60.6866557,93.066627 68.2475349,93.066627 C79.5888537,93.066627 87.7355629,79.777222 97.38076,77.213511 C103.810891,75.5043703 108.169876,75.7470398 110.457714,77.9415194" id="Path-2" stroke-width="4"></path>
+                <circle id="Oval-Copy-3" stroke-opacity="0.12" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <circle id="Oval-3" stroke-width="4" cx="65" cy="69" r="4"></circle>
+                <rect id="Rectangle-9" stroke-width="4" x="50" y="54" width="60" height="60" rx="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

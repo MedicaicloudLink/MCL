@@ -1,0 +1,1190 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <link rel='stylesheet' type='text/css' href='prettify.css'>
+    <script type='text/javascript' src='jquery.js'></script>
+    <script type='text/javascript' src='prettify.js'></script>
+    <script type='text/javascript'>$(window).load(function(){ $('pre').addClass('prettyprint');prettyPrint();})</script>
+    <title>随访相关</title>
+</head>
+
+<body>
+
+    <!-- 创建随访计划 -->
+    <div>
+        <p class="block">
+            <a name="createfollow" id="createfollow">创建随访计划</a></p>
+        <p class="url">
+            URL : follow/createfollow<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>操作者ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+            <tr>
+                <th>任务名称</th>
+                <th>taskname</th>
+            </tr>
+            <tr>
+                <th>任务表单id</th>
+                <th>taskformid</th>
+            </tr>
+            <tr>
+                <th>任务条件（几个月） </th>
+                <th>taskmonth</th>
+            </tr>
+            <tr>
+                <th>任务简介 </th>
+                <th>taskcontent</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "创建成功：",
+                data: []
+            }
+        </pre>
+    </div>
+<!-- 随访列表 -->
+    <div>
+        <p class="block">
+            <a name="showfollows" id="showfollows">随访列表</a></p>
+        <p class="url">
+            URL : follow/showfollows<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>操作者ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "succ",
+                "message": "随访列表",
+                "data": [
+                    {
+                        "id": "6",
+                        "type": "2",            //任务类型    1.基线2.随访
+                        "projectid": "1",       //项目id
+                        "taskid": "qHp5oOmQeT_2",//任务id
+                        "admin": "1",           //用户id
+                        "createtime": "2017-05-31 08:42:26",//创建时间
+                        "updatetime": "2017-05-24 17:28:18",//更新时间
+                        "taskname": "1",        //任务名称
+                        "taskformid": "1",      //模板id
+                        "taskmonth": "1",       //条件  几个月
+                        "taskcontent": "1",     //中心简介
+                        "status": "1",           //1正常   2.删除
+                        "formname": "随访",           //表单名称
+                        "formdata": "{\"电话\": \"\", \"现居住地\": \"\", \"联系电话\": \"\"}"
+                    }
+    
+                ]
+        }
+        </pre>
+    </div>
+<!-- 删除随访 -->
+    <div>
+        <p class="block">
+            <a name="deletefollow" id="deletefollow">删除随访</a></p>
+        <p class="url">
+            URL : follow/deletefollow<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>操作者ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+            <tr>
+                <th>随访ID </th>
+                <th>taskid</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "err",
+                "message": "删除失败",
+                "data": []
+            }
+            ----------------------------
+            {
+                "code": "succ",
+                "message": "删除成功",
+                "data": []
+            }
+        </pre>
+    </div>
+<!-- 编辑随访 -->
+    <div>
+        <p class="block">
+            <a name="editfollow" id="editfollow">编辑随访</a></p>
+        <p class="url">
+            URL : follow/editfollow<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>操作者ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+            <tr>
+                <th>随访ID </th>
+                <th>taskid</th>
+            </tr>
+             <tr>
+                <th>任务名称</th>
+                <th>taskname</th>
+            </tr>
+            <tr>
+                <th>任务表单id</th>
+                <th>taskformid(无所谓)</th>
+            </tr>
+            <tr>
+                <th>任务条件（几个月） </th>
+                <th>taskmonth</th>
+            </tr>
+            <tr>
+                <th>任务简介 </th>
+                <th>taskcontent</th>
+            </tr>
+            <tr>
+                <th>表单名称</th>
+                <th>formname</th>
+            </tr>
+            <tr>
+                <th>表单数据</th>
+                <th>formdata</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "err",
+                "message": "编辑失败",
+                "data": []
+            }
+            ----------------------------
+            {
+                "code": "succ",
+                "message": "编辑成功",
+                "data": []
+            }
+        </pre>
+    </div>
+<!-- 统计随访 -->
+    <div>
+        <p class="block">
+            <a name="followstatistics" id="followstatistics">统计随访</a></p>
+        <p class="url">
+            URL : follow/followstatistics<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>用户ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "succ",
+                "message": "随访数据：",
+                "data": {
+                    "yesterday": "2",           //昨日新增
+                    "shouldfollow": 34,         //应随访
+                    "alreadyfollow": 4,         //已随访
+                    "alreadyper": "11.8%",      //已随访比例
+                    "everystatus": [            //不同随访结果的个数和比例
+                      {
+                        "count": "4",               //数量
+                        "countper": "11.8%",        //百分比
+                        "u_follow_status": "1"      //1:已完成随访 2：退出 3：号码错误 4：无人接听 5：拒绝随访6：结果正常不需要随访 8：待随访
+                      },
+                      {
+                        "count": "1",
+                        "countper": "2.9%",
+                        "u_follow_status": "2"
+                      },
+                      {
+                        "count": 0,
+                        "countper": "0.0%",
+                        "u_follow_status": 3
+                      },
+                      {
+                        "count": "1",
+                        "countper": "2.9%",
+                        "u_follow_status": "4"
+                      },
+                      {
+                        "count": 0,
+                        "countper": "0.0%",
+                        "u_follow_status": 5
+                      },
+                      {
+                        "count": 0,
+                        "countper": "0.0%",
+                        "u_follow_status": 6
+                      },
+                      {
+                        "count": 30,
+                        "countper": "88.2%",
+                        "u_follow_status": 8
+                      }
+                    ],
+                    "followtype": [    //各随访完成情况
+                        {
+                         "arrdata": [
+                         {
+                          "count": "2",
+                          "u_follow_status": "1"
+                         },
+                         {
+                          "count": "1",
+                          "u_follow_status": "2"
+                         },
+                         {
+                          "count": 31,
+                          "u_follow_status": 8
+                         }
+                            ],
+                        "taskname": "随访名称"
+                      },
+                      {
+                         "arrdata": [
+                         {
+                          "count": "2",
+                          "u_follow_status": "1"
+                         },
+                         {
+                          "count": "1",
+                          "u_follow_status": "2"
+                         },
+                         {
+                          "count": 31,
+                          "u_follow_status": 8
+                         }
+                            ],
+                        "taskname": "随访名称1"
+                      }
+                    ]
+                  }
+                }
+        </pre>
+    </div>
+    <!-- 随访-创建/编辑患者随访 -->
+    <div>
+        <p class="block">
+            <a name="feditfollow" id="feditfollow">随访-创建/编辑患者随访</a></p>
+        <p class="url">
+            URL : follow/feditfollow<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>用户ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+            <tr>
+                <th>患者ID</th>
+                <th>mdid</th>
+            </tr>
+            <tr>
+                <th>随访ID </th>
+                <th>taskid</th>
+            </tr>
+            <tr>
+                <th>源数据</th>
+                <th>sourcedata</th>
+            </tr>
+            <tr>
+                <th>用户数据 </th>
+                <th>patientdata</th>
+            </tr>
+            <tr>
+                <th>状态（1:已完成随访（审核通过） 2：其他原因 3：号码错误 4：无人接听 5：患者不配合6：因意外事件打断；7.保存；9提交（待审核）；10审核未通过',）</th>
+                <th>status</th>
+            </tr>
+            <tr>
+                <th>其他原因（状态为2的时候填写） </th>
+                <th>other_reason</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "err",
+                "message": "失败",
+                "data": []
+            }
+            ----------------------------
+            {
+                "code": "succ",
+                "message": "成功",
+                "data": "记录id"
+            }
+        </pre>
+    </div>
+<!-- 随访-记录打开项目时间 -->
+    <div>
+        <p class="block">
+            <a name="fopenproject" id="fopenproject">随访-记录打开项目时间</a></p>
+        <p class="url">
+            URL : project/fopenproject<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>用户ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>项目ID </th>
+                <th>projectid</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "err",
+                "message": "记录失败",
+                "data": []
+            }
+            ----------------------------
+            {
+                "code": "succ",
+                "message": "记录成功",
+                "data": []
+            }
+        </pre>
+    </div>
+    <!-- 随访-创建备注 -->
+    <div>
+        <p class="block">
+            <a name="fcreateremark" id="fcreateremark">随访-创建备注</a></p>
+        <p class="url">
+            URL : follow/fcreateremark<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>用户ID</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>记录ID </th>
+                <th>recordid</th>
+            </tr>
+            <tr>
+                <th>备注 </th>
+                <th>remark</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "err",
+                "message": "创建失败",
+                "data": []
+            }
+            ----------------------------
+            {
+                "code": "succ",
+                "message": "创建成功",
+                "data": []
+            }
+        </pre>
+    </div>
+<!-- 患者随访-备注列表 -->
+<div>
+   <p class="block">
+   <a name="fremarklist" id="fremarklist">患者随访-备注列表</a></p>
+    <p class="url">
+        URL : follow/fremarklist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "备注列表：",
+            "data": [
+                {
+                    "id": "2",                  //备注id
+                    "recordid": "SR9GKq8qXc",       //记录id
+                    "remark": "这个患者又不需要检查了",    //备注
+                    "userid": "1",              //创建人
+                    "createtime": "2017-06-29 14:33:45",    //创建时间
+                    "s_username": "霍佳慧"         //创建人
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-删除备注 -->
+<div>
+   <p class="block">
+   <a name="fdeleteremark" id="fdeleteremark">患者随访-删除备注</a></p>
+    <p class="url">
+        URL : follow/fdeleteremark<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>备注id</th>
+            <th>id</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "删除成功",
+            "data": []
+        }
+        ------------------------
+        {
+            "code": "err",
+            "message": "删除失败",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 患者随访-上传附件 -->
+<div>
+   <p class="block">
+   <a name="fupfile" id="fupfile">患者随访-上传附件</a></p>
+    <p class="url">
+        URL : follow/fupfile<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>附件</th>
+            <th>UploadForm[file][]&nbsp;&nbsp;例如："input type='file' name='<font color='red'>UploadForm[file][]</font>'"</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "图片信息:",
+            "data": [
+                {
+                    "url": 6,            //附件url
+                    "fname": "11.gif"   //附件名称
+                },
+                {
+                    "url": 7,
+                    "fname": "通话录音(13716088219)_20170421155518.mp3"
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-添加附件文字说明 -->
+<div>
+   <p class="block">
+   <a name="faddfilenote" id="faddfilenote">患者随访-添加附件文字说明</a></p>
+    <p class="url">
+        URL : follow/faddfilenote<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+        <tr>
+            <th>数据</th>
+            <th>data &nbsp;&nbsp;<font color='red'>(json数组。url:附件url；note:文字说明;fname:文件名称)[{"url":"www.sdf","fname":"123.jpj","note": "录音"}]</font></th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "添加成功",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 患者随访-附件列表 -->
+<div>
+   <p class="block">
+   <a name="ffilelist" id="ffilelist">患者随访-附件列表</a></p>
+    <p class="url">
+        URL : follow/ffilelist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "附件列表：",
+            "data": [
+                {
+                    "id": "7",          //附件id
+                    "name": "通话录音@(13716088219)_20170421155518.mp3", //名称
+                    "remark": "",                               //文字说明
+                    "createtime": "2017-07-05 14:02:51",        //时间
+                    "userid": "1",                              //用户id
+                    "s_username": "霍佳慧"                         //用户名
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-删除附件 -->
+<div>
+   <p class="block">
+   <a name="fdeletefile" id="fdeletefile">患者随访-删除附件</a></p>
+    <p class="url">
+        URL : follow/fdeletefile<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>附件id</th>
+            <th>id</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "删除成功",
+            "data": []
+        }
+        -------------------------
+        {
+            "code": "err",
+            "message": "删除失败",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 患者随访-已参加的项目列表 -->
+<div>
+   <p class="block">
+   <a name="fprojectlist" id="fprojectlist">患者随访-已参加的项目列表</a></p>
+    <p class="url">
+        URL : project/fprojectlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "已参加项目列表：",
+            "data": [
+                {
+                    "type": 1,      //1：进行中；2：已结束
+                    "projectname": "阜外 项目名称",   //项目名称
+                    "projectid": "1",       //项目id
+                    "opentime": "2017-07-11 11:49:39",//项目打开时间
+                    "shouldnum": 43,//应随访数
+                    "commitnum": "3",   //已提交数
+                    "savenum": "0"      //已保存数
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-不同状态下的随访数量 -->
+<div>
+   <p class="block">
+   <a name="fstatusnum" id="fstatusnum">患者随访-不同状态下的随访数量</a></p>
+    <p class="url">
+        URL : follow/fstatusnum<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "已参加项目列表：",
+            "data": {
+                        "mytodaycommitnum": "0",// 我的今天提交数
+                        "mytodaysavenum": "0",//我的今天保存数
+                        "mytodaynum": 0,//我的今天总随访
+                        "todaycommitnum": "1",//今天提交数
+                        "todaysavenum": "0",    //今天保存数
+                        "todaynum": 1,          //今天总随访
+                        "shouldnum": 43,        //应随访
+                        "savenum": "0",         //保存数
+                        "commitnum": "3",       //提交数
+                        "returnnum": "1"        //被退回数
+                        "workdatanum":"4"       //工作日志数量
+            }
+        }
+    </pre>    
+</div>
+<!-- 患者随访-我的工作日志 -->
+<div>
+   <p class="block">
+   <a name="fworkdata" id="fworkdata">患者随访-我的工作日志（列表，排序，搜索）</a></p>
+    <p class="url">
+        URL : follow/fworkdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>当前页</th>
+            <th>pagenum</th>
+        </tr>
+        <tr>
+            <th>排序类型（name:患者姓名；age:年龄；gender:性别；status:状态；updatetime:时间）</th>
+            <th>type(可选)</th>
+        </tr>
+        <tr>
+            <th>排序（正序：asc;倒叙：desc）</th>
+            <th>sort（可选）</th>
+        </tr>
+        <tr>
+            <th>搜索内容（选填）</th>
+            <th>search（可选）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "工作日志：",
+            "data": {
+                "result": [
+                {
+                    "recordid": "1",    //随访患者记录id
+                    "projectid": "1",  //项目id
+                    "u_follow_id": "qHp5oOmQeT_2", //随访任务id
+                    "u_patientname": "张于方", //患者姓名
+                    "u_gender": "1",        //性别
+                    "u_birthday": "1956-04-05", //生日
+                    "u_phone": "",          //电话
+                    "u_secondphone": "",    //备用电话
+                    "u_MDID": "ynZMjyJZ22",   //mdid
+                    "u_follow_status": "1",  //1:提交（审核通过）7.保存；9提交（待审核）；10审核未通过',
+                    "updatetime": "2017-06-29 11:27:07", //更新时间
+                    "statusnote": "已取消" //状态说明
+                }
+            ],
+                "totalnum": "3" //日志总数
+            }
+        }
+    </pre>    
+</div>
+<!-- 患者随访-保存/提交/随访患者列表 -->
+<div>
+   <p class="block">
+   <a name="ffollowlist" id="ffollowlist">患者随访-保存/提交/随访患者列表（搜索）</a></p>
+    <p class="url">
+        URL : follow/ffollowlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>当前页</th>
+            <th>pagenum</th>
+        </tr>
+        <tr>
+            <th>类型（save:保存  ； commit提交 ； return 退回）</th>
+            <th>type</th>
+        </tr>
+        <tr>
+            <th>搜索内容（选填）</th>
+            <th>search（可选）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "随访：",
+            "data": {
+                "result": [
+                {
+                    "u_patientname": "张于方", //患者姓名
+                    "u_gender": "1",        //性别
+                    "u_birthday": "1956-04-05", //生日
+                    "u_phone": "",          //电话
+                    "u_secondphone": "",    //备用电话
+                    "u_MDID": "ynZMjyJZ22",   //mdid
+                    "u_follow_status": "1",  //1:提交（审核通过）7.保存；9提交（待审核）；10审核未通过',
+                    "updatetime": "2017-06-29 11:27:07" //更新时间
+                    "remark": "",       //审核说明
+                    "checktime": "",   //审核时间
+                    "recordid": "",   //随访患者记录id
+                    "u_follow_id": "CsGRVQ7jDR_2", //随访任务id
+                    "projectid": "1",//项目id
+                    "username": "霍佳慧",
+                }
+            ],
+                "totalnum": "3" //总数
+            }
+        }
+    </pre>    
+</div>
+<!-- 患者随访-应随访患者列表 -->
+<div>
+   <p class="block">
+   <a name="fshouldfollow" id="fshouldfollow">患者随访-应随访患者列表（列表，排序，搜索）</a></p>
+    <p class="url">
+        URL : follow/fshouldfollow<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>当前页</th>
+            <th>pagenum</th>
+        </tr>
+        <tr>
+            <th>排序类型（name:患者姓名；age:年龄；gender:性别；overtime:超时；lasttime:上次随访）</th>
+            <th>type(可选)</th>
+        </tr>
+        <tr>
+            <th>排序（正序：asc;倒叙：desc）</th>
+            <th>sort（可选）</th>
+        </tr>
+        <tr>
+            <th>搜索内容（选填）</th>
+            <th>search（可选）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "应随访患者列表：",
+            "data": {
+                "total": 2,
+                "data": [
+                    {
+                        "u_id": "198",
+                        "u_MDID": "qj7eLs5HBH",         //患者id
+                        "u_projectid": "62",            //项目id
+                        "u_patientname": "紫紫",          //患者姓名
+                        "u_gender": "2",                //性别
+                        "u_birthday": "1908-02-02",     //生日
+                        "u_phone": "13467899876",       //手机号
+                        "u_secondphone": "",            //备用电话
+                        "u_status": "0",                //
+                        "u_jointime": "2017-07-03",     //入组时间
+                        "type": "new",                  //type：new为未处理，值为wait时，是需要进一步处理
+                        "taskid": "GPQX3VbXe1_2",       //随访id
+                        "taskmonth": "1",               //随访时间
+                        "overday": 2,                   //超时几天
+                        "lastfollow": "2017-08-03 16:41:18",//上一次随访时间
+                        "follow_status": "2",   //需要进一步处理的有这个字段
+                        "other_reason": "其他原因",//需要进一步处理的有这个字段 提示说明
+                    }
+                ]
+            }
+        }
+    </pre>    
+</div>
+<!-- 患者随访-随访病例数据 -->
+<div>
+   <p class="block">
+   <a name="fpatientdata" id="fpatientdata">患者随访-随访病例数据</a></p>
+    <p class="url">
+        URL : follow/fpatientdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "病例数据：",
+            "data": [
+                {
+                    "recordid": "1",                //记录id
+                    "u_follow_id": "qHp5oOmQeT_2",  //随访id
+                    "u_MDID": "d09Wh0hJGh",         //患者id
+                    "updatetime": "2017-07-06 14:06:27",    //更新时间
+                    "updateuserid": "1",            //更新人
+                    "sourcedata": " ",              //源数据
+                    "patientdata": "",              //用户数据
+                    "formdata": "",                  //模板数据
+                    "formname": "吃饭怎么办",            //模板名称
+                    "projectid": "1",               //项目id
+                    "u_follow_status": "2"          //状态  1:已完成随访（审核通过）； 2-6取消；7.保存；9提交（待审核）；10审核未通过
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-随访详情 -->
+<div>
+   <p class="block">
+   <a name="ffollowinfo" id="ffollowinfo">患者随访-随访详情</a></p>
+    <p class="url">
+        URL : follow/ffollowinfo<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>随访id</th>
+            <th>taskid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "病例数据：",
+            "data": [
+                {
+                    "id": "72",
+                    "type": "2",
+                    "projectid": "1",
+                    "taskid": "YK0n5ZdQuM_2",       //随访ID
+                    "admin": "1",
+                    "createtime": "2017-06-26 03:16:12",
+                    "updatetime": "2017-06-30 09:28:30",
+                    "taskname": "3",
+                    "taskformid": "ME9BzgIzhc",
+                    "taskmonth": "1",
+                    "taskcontent": "3", 
+                    "status": "1",
+                    "formname": "空气污染问卷",           //模板数据
+                    "formdata":"" //模板内容
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-历史记录 -->
+<div>
+   <p class="block">
+   <a name="fpatientrecord" id="fpatientrecord">患者随访-历史记录</a></p>
+    <p class="url">
+        URL : follow/fpatientrecord<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>患者id</th>
+            <th>mdid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "历史记录",
+            "data": [
+                {
+                    "u_MDID": "5KhpkSY5CK",         //患者id
+                    "updateuserid": "kpjJ3IlAuN",       //更新人
+                    "checktime": "2017-08-01 15:35:20", //审核时间  
+                    "recordid": "WbcqwLW676",           //记录id
+                    "u_follow_id": "GPQX3VbXe1_2",      //随访id
+                    "username": "小华子哦",                 //更新人名字
+                    "updatetime": "小华子哦",               //更新时间
+                    "typename": "哈哈",               //随访名称
+                    "type": "follow"                //记录类型（input:登记；follow:随访）
+                    "status":"1",            //1.已完成；2-6.取消；7.保存；9.待审核 ；10.未通过审核；11.未开始
+                    "month": 2              //随访天数
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 患者随访-锁定患者 -->
+<div>
+   <p class="block">
+   <a name="fclickfollow" id="fclickfollow">患者随访-锁定患者</a></p>
+    <p class="url">
+        URL : follow/fclickfollow"<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>患者id</th>
+            <th>mdid</th>
+        </tr>
+        <tr>
+            <th>任务（随访）id</th>
+            <th>taskid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "允许访问",
+            "data": "allow"
+        }
+        -------------------------------------------
+        {
+            "code": "succ",
+            "message": "不允许访问",
+            "data": "no"
+        }
+        ----------------------------------------
+        {
+            "code": "err",
+            "message": "操作失败",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 审核患者 -->
+<div>
+   <p class="block">
+   <a name="checkpatient" id="checkpatient">审核患者</a></p>
+    <p class="url">
+        URL : follow/checkpatient<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>审核人id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>审核状态</th>
+            <th>status(10:退回；1：通过)</th>
+        </tr>
+        <tr>
+            <th>文字说明</th>
+            <th>remark</th>
+        </tr>
+        
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "成功",
+            data: {
+                
+            }
+        }
+    </pre>    
+</div>
+</body>

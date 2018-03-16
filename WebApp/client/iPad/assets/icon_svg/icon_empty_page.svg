@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="380px" height="309px" viewBox="0 0 323 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="25" y="17.8701183" width="166" height="212"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="166" height="212" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="18" y="18" width="166" height="212"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="166" height="212" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-439.000000, -216.000000)">
+            <g id="Group-2" transform="translate(437.000000, 216.000000)">
+                <text id="当前没有项目，点击按钮“新建项目”创建" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" fill-opacity="0.54" fill="#000000">
+                    <tspan x="0" y="306">当前没有项目，点击按钮“新建项目”创建</tspan>
+                </text>
+                <g id="Group" transform="translate(55.000000, 0.000000)">
+                    <use id="Rectangle" stroke-opacity="0.12" stroke="#000000" mask="url(#mask-2)" stroke-width="2" fill="#F4F4F4" transform="translate(108.000000, 123.870118) rotate(15.000000) translate(-108.000000, -123.870118) " xlink:href="#path-1"></use>
+                    <use id="Rectangle" stroke-opacity="0.12" stroke="#000000" mask="url(#mask-4)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <rect id="Rectangle-2" fill-opacity="0.12" fill="#000000" x="42" y="42" width="118" height="76"></rect>
+                    <rect id="Rectangle-2-Copy" fill-opacity="0.12" fill="#000000" x="42" y="150" width="118" height="8"></rect>
+                    <rect id="Rectangle-2-Copy" fill-opacity="0.12" fill="#000000" x="42" y="170" width="118" height="8"></rect>
+                    <rect id="Rectangle-2-Copy" fill-opacity="0.12" fill="#000000" x="42" y="190" width="40" height="8"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

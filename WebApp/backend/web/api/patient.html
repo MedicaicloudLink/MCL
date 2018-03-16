@@ -1,0 +1,1530 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+    
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <link rel='stylesheet' type='text/css' href='prettify.css'>
+        <script type='text/javascript' src='jquery.js'></script>
+        <script type='text/javascript' src='prettify.js'></script>
+        <script type='text/javascript'>$(window).load(function(){ $('pre').addClass('prettyprint');prettyPrint();})</script>
+        <title>患者相关</title>
+    </head>
+    
+<body>
+<!-- 导出患者 -->
+<div>
+   <p class="block">
+   <a name="exportpatient" id="exportpatient">导出患者</a></p>
+    <p class="url">
+        URL : patient/exportpatient<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>患者id （多个用,隔开）</th>
+            <th>mdid</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "",
+            message: "",
+            data: {
+                
+            }
+        }
+        
+
+    </pre>    
+</div>
+
+<!-- 创建患者基本信息 -->
+<div>
+   <p class="block">
+   <a name="createrecord" id="createrecord">创建患者基本信息</a></p>
+    <p class="url">
+        URL : patient/createrecord<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>创建人id (必填)</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id (必填)</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>患者姓名 (必填)</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>性别 (必填)</th>
+            <th>gender</th>
+        </tr>
+        <tr>
+            <th>生日 (必填)</th>
+            <th>birthday</th>
+        </tr>
+        <tr>
+            <th><font color='red'>下边的参数视情况填写</font></th>
+            <th></th>
+        </tr>
+        
+       <tr>
+            <th>入组时间 </th>
+            <th>jointime</th>
+        </tr>
+        <tr>
+            <th>电话</th>
+            <th>phone</th>
+        </tr>
+        <tr>
+            <th>备选电话</th>
+            <th>secondphone</th>
+        </tr>
+        <tr>
+            <th>地址</th>
+            <th>address</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "新患者mdid：",
+            data: {
+                recordid: mdid
+            }
+        }
+        
+
+    </pre>    
+</div>
+
+<!-- 创建患者数据 -->
+<div>
+   <p class="block">
+   <a name="createpatientdata" id="createpatientdata">创建患者数据</a></p>
+    <p class="url">
+        URL : patient/createpatientdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>创建人id</th>
+            <th>createuserid</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid</th>
+        </tr>
+        <tr>
+            <th>模板id</th>
+            <th>templateid</th>
+        </tr>
+        <tr>
+            <th>数据(json)</th>
+            <th>patientdata</th>
+        </tr>
+        <tr>
+            <th>源数据   (json)</th>
+            <th>sourcedata  </th>
+        </tr>
+        <tr>
+            <th>图片 (json)</th>
+            <th>imgs</th>
+        </tr>
+        <tr>
+            <th>长文本</th>
+            <th>remark</th>
+        </tr>
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "创建失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "创建成功",
+            data: {
+                "recordid": 31     //记录id
+            }
+        }
+    </pre>    
+</div>
+
+<!-- 获取患者基本信息 -->
+<div>
+   <p class="block">
+   <a name="getpatientbase" id="getpatientbase">获取患者基本信息</a></p>
+    <p class="url">
+        URL : patient/getpatientbase<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid</th>
+        </tr>
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "患者基本信息：",
+            data: [
+                {
+                    u_id: "1",
+                    u_MDID: "9XvmqqmsNu",
+                    u_projectid: "1",
+                    u_patientname: "姓名1",
+                    u_gender: "1",
+                    u_birthday: "1906-04-02",
+                    u_createuserid: "1",
+                    u_createtime: "2017-02-04 16:31:37",
+                    u_updatetime: "2017-02-04 16:31:37", //最新更新时间
+                    u_status: "0",
+                    u_jointime: "2017-02-04 16:31:37",
+                    s_username: "hjh",
+                    s_formalname: "",
+                    u_projectName: "阜外CT随访"
+                }
+                    ]
+        }
+    </pre>    
+</div>
+
+<!-- 获取患者数据记录 -->
+<div>
+   <p class="block">
+   <a name="getrecords" id="getrecords">获取患者数据记录</a></p>
+    <p class="url">
+        URL : patient/getrecords<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid   (必填)</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "患者记录：",
+            data: [
+                {
+                    id: "1",
+                    u_MDID: "9XvmqqmsNu",
+                    u_templetid: "1",
+                    u_patientdata: "{"code": "succ", "data": [{"u_projectid": "1", "u_createtime": "2017-02-14", "u_createuser": "1", "u_templateid": "1", "u_templatedata": "", "u_templatename": "基本特征"}, {"u_projectid": "1", "u_createtime": "2017-02-01", "u_createuser": "", "u_templateid": "3", "u_templatedata": "", "u_templatename": "用药记录"}], "message": "项目模板："}",
+                    u_createuserid: "",
+                    u_createtime: "2017-02-14 17:17:20",
+                    u_updateuserid: "",
+                    u_updatetime: 2017-02-14 17:17:20",
+                    u_recordid: "1",   //记录id （修改使用）
+                    u_templatename: "基本体征",
+                    commitlog:"[
+                        {
+                            userid: "kpjJ3IlAuN", 
+                            createtime: "2017-08-18 18:18:50", 
+                            status: "3", //2，提交了（待审核）3，被退回 4，审核通过
+                            username: "小华子哦"  //提交或审核通过或退回（按照上边状态判断）
+                        }
+                    ]"//记录
+                },
+                {
+                    id: "26",
+                    u_MDID: "9XvmqqmsNu",
+                    u_templetid: "2",
+                    u_patientdata: "{"authors": [{"genre": "sciencefiction", "lastName": "Asimov", "firstName": "Isaac"}, {"genre": "fantasy", "lastName": "Williams", "firstName": "Tad"}, {"genre": "christianfiction", "lastName": "Peretti", "firstName": "Frank"}], "musicians": [{"lastName": "Clapton", "firstName": "Eric", "instrument": "guitar"}, {"lastName": "Rachmaninoff", "firstName": "Sergei", "instrument": "piano"}], "programmers": [{"email": "aaaa", "lastName": "McLaughlin", "firstName": "Brett"}, {"email": "bbbb", "lastName": "Hunter", "firstName": "Jason"}, {"email": "cccc", "lastName": "Harold", "firstName": "Elliotte"}]}",
+                    u_createuserid: "2",
+                    u_createtime: "2017-02-14 17:17:20",
+                    u_updateuserid: "",
+                    u_updatetime: "2017-02-14 17:17:20",
+                    u_recordid: "16",
+                    u_templatename: "既往病史"
+                },
+                    ]
+        }
+    </pre>    
+</div>
+
+<!-- 获取患者某条数据记录 -->
+<div>
+   <p class="block">
+   <a name="getrecord" id="getrecord">获取患者某条记录</a></p>
+    <p class="url">
+        URL : patient/getrecord<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "患者某条记录：",
+            "data": {
+                        "id": "53",
+                        "u_MDID": "UO1aVGnVu4",
+                        "u_templetid": "1",
+                        "u_patientdata": "{\"BMI\": \"\", \"DBP\": 68, \"SBP\": 123, \"height\": 156, \"weight\": 25, \"breathe\": 45, \"heartbeat\": 65, \"inspectDate\": \"2017-02-17\", \"temperature\": 37.2, \"abdominalGirth\": 47}",
+                        "u_createuserid": "1",
+                        "u_createtime": "2017-02-22 12:17:53",
+                        "u_updateuserid": "",
+                        "u_updatetime": "2017-02-22 12:17:53",
+                        "u_recordid": "2"
+                    }
+        }
+    </pre>    
+</div>
+
+<!-- 获取项目下患者列表 -->
+<div>
+   <p class="block">
+   <a name="getprojectpatients" id="getprojectpatients">获取项目下患者列表</a></p>
+    <p class="url">
+        URL : patient/getprojectpatients<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>当前页</th>
+            <th>pagenum</th>
+        </tr>
+       <tr>
+            <th>管理端需要加此参数 值为1</th>
+            <th>type</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "患者列表：",
+            data: {
+                allnum: "3",
+                patientList: [
+                    {
+                        u_id: "10",
+                        u_MDID: "q2iAR4E2it",
+                        u_projectid: "1",
+                        u_patientname: "1",
+                        u_gender: "1",
+                        u_birthday: "1906-04-02",
+                        u_createuserid: "1",
+                        u_createtime: "2017-02-06 15:39:08",
+                        u_updatetime: "2017-02-06 15:39:08",//最新更新时间
+                        u_status: "0",
+                        s_username: "hjh",
+                        s_formalname: "",
+                        "projectname": "阜外CT随访",
+                        "address": [
+                            "东大门"
+                        ],                  地址
+                        "group": "王、智障1",   //组名
+                        "follow": "已入组",  //随访状态
+                        "status":"2" ,   //2，提交（待审核）；3.被退回；4.审核通过
+                        "center":"中心名称"    //中心名称
+                    }
+                       ]
+                }
+        }
+    </pre>    
+</div>
+
+<!-- 获取患者列表 -->
+<div>
+   <p class="block">
+   <a name="patientlist" id="patientlist">获取患者列表</a></p>
+    <p class="url">
+        URL : patient/patientlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>当前页</th>
+            <th>pagenum</th>
+        </tr>
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "患者列表：",
+            data: {
+                allnum: "2",
+                patientList: [
+                    {
+                        u_id: "36",
+                        u_MDID: "Z68L758MhN",
+                        u_projectid: "2",
+                        u_patientname: "2",
+                        u_gender: "2",
+                        u_birthday: "2017-02-09",
+                        u_createuserid: "1",
+                        u_createtime: "2017-02-08 07:11:26",
+                        u_updatetime: "2017-02-08 07:11:26", //最新更新时间
+                        u_status: "0",
+                        u_projectName: "项目二",
+                        s_username: "hjh",
+                        s_formalname: ""
+                    },
+                    {
+                        u_id: "35",
+                        u_MDID: "CRDDMbl3Rl",
+                        u_projectid: "2",
+                        u_patientname: "d",
+                        u_gender: "2",
+                        u_birthday: "2017-02-09",
+                        u_createuserid: "1",
+                        u_createtime: "2017-02-08 07:10:15",
+                        u_updatetime: "2017-02-08 07:11:26", //最新更新时间
+                        u_status: "0",
+                        u_projectName: "项目二",
+                        s_username: "hjh",
+                        s_formalname: ""
+                    }
+                       ]
+                }
+        }
+    </pre>    
+</div>
+<!-- 根据姓名搜索项目下患者列表 -->
+<div>
+   <p class="block">
+   <a name="searchpatientname" id="searchpatientname">根据姓名搜索项目下患者</a></p>
+    <p class="url">
+        URL : patient/searchpatientname<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>患者姓名</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+       <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "患者列表:",
+            "data": [
+                {
+                    "u_id": "114",
+                    "u_MDID": "SR9GKq8qXc",
+                    "u_projectid": "1",
+                    "u_patientname": "王沙",
+                    "u_gender": "1",
+                    "u_birthday": "1979-01-01",
+                    "u_createuserid": "1",
+                    "u_createtime": "2017-04-12 15:14:51",
+                    "u_status": "0",
+                    "u_jointime": "2017-04-12",
+                    "u_updatetime": "2017-04-13 07:41:08",
+                    "u_updateuserid": "",
+                    "s_username": "hjh",
+                    "group": "王、智障1",   //组名
+                    "follow": "已入组",  //随访状态
+                    "status":"2" ,   //2，提交（待审核）；3.被退回；4.审核通过
+                    "center":"中心名称"    //中心名称
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 入组时间搜索项目下患者列表 -->
+<div>
+   <p class="block">
+   <a name="searchpatientjointime" id="searchpatientjointime">入组时间搜索项目下患者</a></p>
+    <p class="url">
+        URL : patient/searchpatientjointime<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>开始时间</th>
+            <th>startjoin</th>
+        </tr>
+        <tr>
+            <th>结束时间</th>
+            <th>endjoin</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+       <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "患者列表:",
+            "data": [
+                {
+                    "u_id": "114",
+                    "u_MDID": "SR9GKq8qXc",
+                    "u_projectid": "1",
+                    "u_patientname": "王沙",
+                    "u_gender": "1",
+                    "u_birthday": "1979-01-01",
+                    "u_createuserid": "1",
+                    "u_createtime": "2017-04-12 15:14:51",
+                    "u_status": "0",
+                    "u_jointime": "2017-04-12",
+                    "u_updatetime": "2017-04-13 07:41:08",
+                    "u_updateuserid": "",
+                    "s_username": "hjh",
+                    "group": "王、智障1"   //组名
+                }
+            ]
+        }
+    </pre>    
+</div>
+<!-- 修改患者记录 -->
+<div>
+   <p class="block">
+   <a name="updatepatientdata" id="updatepatientdata">修改患者记录</a></p>
+    <p class="url">
+        URL : patient/updatepatientdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>修改人</th>
+            <th>createuserid</th>
+        </tr>
+        <tr>
+            <th>记录id</th>
+            <th>recordid</th>
+        </tr>
+        <tr>
+            <th>数据(json)</th>
+            <th>patientdata</th>
+        </tr>
+        <tr>
+            <th>源数据   (json)</th>
+            <th>sourcedata  </th>
+        </tr>
+        <tr>
+            <th>图片 (json)</th>
+            <th>imgs</th>
+        </tr>
+        <tr>
+            <th>长文本</th>
+            <th>remark</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "修改失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "修改成功",
+            data: []
+        }
+    </pre>    
+</div>
+
+<!-- 修改患者基本信息 -->
+<div>
+   <p class="block">
+   <a name="updatepatientbase" id="updatepatientbase">修改患者基本信息</a></p>
+    <p class="url">
+        URL : patient/updatepatientbase<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>修改人</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>患者姓名</th>
+            <th>name  </th>
+        </tr>
+        <tr>
+            <th>性别</th>
+            <th>gender</th>
+        </tr>
+        <tr>
+            <th>生日</th>
+            <th>birthday</th>
+        </tr>
+        <tr>
+            <th><font color='red'>下边的参数视情况填写</font></th>
+            <th></th>
+        </tr>
+        
+       <tr>
+            <th>入组时间 </th>
+            <th>jointime</th>
+        </tr>
+        <tr>
+            <th>电话</th>
+            <th>phone</th>
+        </tr>
+        <tr>
+            <th>备选电话</th>
+            <th>secondphone</th>
+        </tr>
+        <tr>
+            <th>地址</th>
+            <th>address</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "修改失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "修改成功",
+            data: []
+        }
+    </pre>    
+</div>
+<!-- 删除患者记录 -->
+<div>
+   <p class="block">
+   <a name="deletepatientdata" id="deletepatientdata">批量/单个删除患者记录</a></p>
+    <p class="url">
+        URL : patient/deletepatientdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>recordid</th>
+            <th>recordid </th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "删除失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "删除成功",
+            data: []
+        }
+    </pre>    
+</div>
+
+<!-- 删除患者 -->
+<div>
+   <p class="block">
+   <a name="deletepatient" id="deletepatient">批量/单个删除患者</a></p>
+    <p class="url">
+        URL : patient/deletepatient<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid    多个用,隔开</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "删除失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "删除成功",
+            data: []
+        }
+    </pre>    
+</div>
+<!-- 创建组 -->
+<div>
+   <p class="block">
+   <a name="creategroup" id="creategroup">创建组</a></p>
+    <p class="url">
+        URL : patient/creategroup<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>组名</th>
+            <th>groupname</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>创建人</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "创建失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            "code": "succ",
+            "message": "创建成功，组id：",
+            "data": {
+                "groupid": "3"
+            }
+        }
+    </pre>    
+</div>
+<!-- 修改组-->
+<div>
+   <p class="block">
+   <a name="updategroup" id="updategroup">修改组</a></p>
+    <p class="url">
+        URL : patient/updategroup<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>组名</th>
+            <th>groupname</th>
+        </tr>
+        <tr>
+            <th>组id</th>
+            <th>groupid</th>
+        </tr>
+        <tr>
+            <th>修改人</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "修改成功",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 组内加人 -->
+<div>
+   <p class="block">
+   <a name="addgrouppatient" id="addgrouppatient">组内加人</a></p>
+    <p class="url">
+        URL : patient/addgrouppatient<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>组id</th>
+            <th>groupid (多个患者用,隔开 )</th>
+        </tr>
+        <tr>
+            <th>患者id</th>
+            <th>patients (多个患者用,隔开 )</th>
+        </tr>
+        <tr>
+            <th>添加人</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "创建成功",
+            data:[]
+        }
+        
+    </pre>    
+</div>
+<!-- 组内删除患者 -->
+<div>
+   <p class="block">
+   <a name="deletegrouppatient" id="deletegrouppatient">组内删除患者</a></p>
+    <p class="url">
+        URL : patient/deletegrouppatient<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>组id</th>
+            <th>groupid （全部的情况，此值为空）</th>
+        </tr>
+        <tr>
+            <th>患者id</th>
+            <th>patients (多个患者用,隔开 )</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "删除失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "删除成功",
+            data: []
+        }
+        
+    </pre>    
+</div>
+<!-- 组列表 -->
+<div>
+   <p class="block">
+   <a name="grouplist" id="grouplist">组列表</a></p>
+    <p class="url">
+        URL : patient/grouplist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "组列表：",
+            "data": [
+                {
+                    "u_groupid": "3",
+                    "u_groupname": "组名1",
+                    "u_groupmem": "组介绍",
+                    "u_groupcreate": "1",
+                    "u_createtime": "2017-02-15 15:39:05",
+                    "num": "0"    //组内人数
+                },
+                {
+                    "u_groupid": "2",
+                    "u_groupname": "组名1",
+                    "u_groupmem": "组介绍",
+                    "u_groupcreate": "1",
+                    "u_createtime": "2017-02-15 15:38:05",
+                    "num": "1"         //组内人数
+                }
+            ]
+        }
+        
+    </pre>    
+</div>
+<!-- 根据组名搜索组 -->
+<div>
+   <p class="block">
+   <a name="searchgroup" id="searchgroup">根据组名搜索组</a></p>
+    <p class="url">
+        URL : patient/searchgroup<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>组名</th>
+            <th>groupname</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "组:",
+            "data": [
+                {
+                    "u_groupid": "1",   //组id
+                    "u_groupname": "智障1",   //组名
+                    "u_groupcreate": "1",   //创建人
+                    "u_createtime": "2017-05-23 16:22:27",  //创建时间
+                    "u_projectid": "1", //项目id
+                    "num": "2"  //组内人数
+                },
+                {
+                    "u_groupid": "zlC27C5Ulg",
+                    "u_groupname": "智障",
+                    "u_groupcreate": "1",
+                    "u_createtime": "2017-05-23 16:07:28",
+                    "u_projectid": "1",
+                    "num": "5"
+                }
+                    ]
+        }
+        
+    </pre>    
+</div>
+<!-- 删除组 -->
+<div>
+   <p class="block">
+   <a name="deletegroup" id="deletegroup">删除组</a></p>
+    <p class="url">
+        URL : patient/deletegroup<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>组id</th>
+            <th>groupid   （多个用,隔开）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "删除成功",
+            "data": []
+        }
+        
+    </pre>    
+</div>
+<!-- 组内患者列表 -->
+<div>
+   <p class="block">
+   <a name="grouppatientlist" id="grouppatientlist">组内患者列表</a></p>
+    <p class="url">
+        URL : patient/grouppatientlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>组id</th>
+            <th>groupid(未分组值为no)</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>页数</th>
+            <th>pagenum</th>
+        </tr>
+        <tr>
+            <th>页数</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "组内患者列表：",
+            "data": [
+                {
+                    "u_id": "1",
+                    "u_MDID": "9XvmqqmsNu",     //mdid
+                    "u_projectid": "1",         //项目id
+                    "u_patientname": "姓名1",     //患者姓名
+                    "u_gender": "1",            //患者性别
+                    "u_birthday": "1906-04-02",  //生日
+                    "u_createuserid": "2",      //创建患者的用户id
+                    "u_createtime": "2017-02-04 16:31:37",  //创建时间
+                    "u_status": "0",
+                    "s_username": "admin",                //创建人姓名
+                    "s_formalname": "王企鹅",              
+                    "u_projectName": "阜外CT随访"            //项目名称
+                    "group": "智障"            //组
+                },
+                {
+                    "u_id": "3",
+                    "u_MDID": "oEOV3RIgHY",
+                    "u_projectid": "24",
+                    "u_patientname": "姓名3",
+                    "u_gender": "1",
+                    "u_birthday": "1998-02-03",
+                    "u_createuserid": "1",
+                    "u_createtime": "2017-02-07 15:14:18",
+                    "u_status": "0",
+                    "s_username": "hjh",
+                    "s_formalname": "阿斯顿",
+                    "u_projectName": "s "
+                },
+                {
+                    "u_id": "6",
+                    "u_MDID": "ttp0u95cD6",
+                    "u_projectid": "5",
+                    "u_patientname": "明明2",
+                    "u_gender": "1",
+                    "u_birthday": "2017-02-16",
+                    "u_createuserid": "1",
+                    "u_createtime": "2017-02-04 11:33:02",
+                    "u_status": "0",
+                    "s_username": "hjh",
+                    "s_formalname": "阿斯顿",
+                    "u_projectName": "项目五"
+                }
+                    ]
+        }
+    </pre>    
+</div>
+<!-- 基线统计 -->
+<div>
+   <p class="block">
+   <a name="baselinestatistics" id="baselinestatistics">基线统计</a></p>
+    <p class="url">
+        URL : patient/baselinestatistics<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>中心id(选填)</th>
+            <th>centerid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+  "code": "succ",
+  "message": "基线数据：",
+  "data": {
+    "baselineall": "40",    //基线总数
+    "yesterday": "1",       //昨日新增基线数
+    "week": [                       //周
+      {
+        "date": "2017-05-22",
+        "count": 0
+      },
+      {
+        "date": "2017-05-23",
+        "count": "1"
+      },
+      {
+        "date": "2017-05-24",
+        "count": "2"
+      },
+      {
+        "date": "2017-05-25",
+        "count": "2"
+      },
+      {
+        "date": "2017-05-26",
+        "count": 0
+      },
+      {
+        "date": "2017-05-27",
+        "count": 0
+      },
+      {
+        "date": "2017-05-28",
+        "count": "1"
+      }
+    ],
+    "month": [                  //月
+      {
+        "date": "2017-05-01",
+        "count": "2"
+      },
+      {
+        "date": "2017-05-02",
+        "count": 0
+      },
+      {
+        "date": "2017-05-03",
+        "count": 0
+      },
+      {
+        "date": "2017-05-04",
+        "count": 0
+      },
+      {
+        "date": "2017-05-05",
+        "count": 0
+      },
+      {
+        "date": "2017-05-06",
+        "count": 0
+      },
+      {
+        "date": "2017-05-07",
+        "count": 0
+      },
+      {
+        "date": "2017-05-08",
+        "count": 0
+      },
+      {
+        "date": "2017-05-09",
+        "count": 0
+      },
+      {
+        "date": "2017-05-10",
+        "count": "1"
+      },
+      {
+        "date": "2017-05-11",
+        "count": 0
+      },
+      {
+        "date": "2017-05-12",
+        "count": 0
+      },
+      {
+        "date": "2017-05-13",
+        "count": 0
+      },
+      {
+        "date": "2017-05-14",
+        "count": 0
+      },
+      {
+        "date": "2017-05-15",
+        "count": 0
+      },
+      {
+        "date": "2017-05-16",
+        "count": 0
+      },
+      {
+        "date": "2017-05-17",
+        "count": 0
+      },
+      {
+        "date": "2017-05-18",
+        "count": 0
+      },
+      {
+        "date": "2017-05-19",
+        "count": 0
+      },
+      {
+        "date": "2017-05-20",
+        "count": 0
+      },
+      {
+        "date": "2017-05-21",
+        "count": 0
+      },
+      {
+        "date": "2017-05-22",
+        "count": 0
+      },
+      {
+        "date": "2017-05-23",
+        "count": "1"
+      },
+      {
+        "date": "2017-05-24",
+        "count": "2"
+      },
+      {
+        "date": "2017-05-25",
+        "count": "2"
+      },
+      {
+        "date": "2017-05-26",
+        "count": 0
+      },
+      {
+        "date": "2017-05-27",
+        "count": 0
+      },
+      {
+        "date": "2017-05-28",
+        "count": "1"
+      },
+      {
+        "date": "2017-05-29",
+        "count": 0
+      },
+      {
+        "date": "2017-05-30",
+        "count": 0
+      },
+      {
+        "date": "2017-05-31",
+        "count": "1"
+      }
+    ],
+    "year": [                   //年
+      {
+        "date": "2017-01",
+        "count": 0
+      },
+      {
+        "date": "2017-02",
+        "count": "2"
+      },
+      {
+        "date": "2017-03",
+        "count": "17"
+      },
+      {
+        "date": "2017-04",
+        "count": "9"
+      },
+      {
+        "date": "2017-05",
+        "count": "10"
+      },
+      {
+        "date": "2017-06",
+        "count": 0
+      },
+      {
+        "date": "2017-07",
+        "count": 0
+      },
+      {
+        "date": "2017-08",
+        "count": 0
+      },
+      {
+        "date": "2017-09",
+        "count": 0
+      },
+      {
+        "date": "2017-10",
+        "count": 0
+      },
+      {
+        "date": "2017-11",
+        "count": 0
+      },
+      {
+        "date": "2017-12",
+        "count": 0
+      }
+    ]
+  }
+}
+    </pre>    
+</div>
+<!-- 审核患者 -->
+<div>
+   <p class="block">
+   <a name="checkpatient" id="checkpatient">审核患者</a></p>
+    <p class="url">
+        URL : patient/checkpatient<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>审核人id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>审核状态</th>
+            <th>status(3:退回；4：通过)</th>
+        </tr>
+        <tr>
+            <th>文字说明</th>
+            <th>remark</th>
+        </tr>
+        
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "创建失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "创建成功",
+            data: {
+                
+            }
+        }
+    </pre>    
+</div>
+<!-- 审核患者批量通过 -->
+<div>
+   <p class="block">
+   <a name="passcheck" id="passcheck">审核患者批量通过</a></p>
+    <p class="url">
+        URL : patient/passcheck<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>审核人id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid（多个用,隔开）</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "创建失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "创建成功",
+            data: {
+                
+            }
+        }
+    </pre>    
+</div>
+<!-- 管理端患者随访数据 -->
+<div>
+   <p class="block">
+   <a name="mpatientdata" id="mpatientdata">管理端患者随访数据 </a></p>
+    <p class="url">
+        URL : follow/mpatientdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>患者mdid</th>
+            <th>mdid</th>
+        </tr>
+        <tr>
+            <th>任务id</th>
+            <th>taskid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "病例数据：",
+            "data": [
+                {
+                    "recordid": "1",                //记录id
+                    "u_follow_id": "qHp5oOmQeT_2",  //随访id
+                    "u_MDID": "d09Wh0hJGh",         //患者id
+                    "updatetime": "2017-07-06 14:06:27",    //更新时间
+                    "updateuserid": "1",            //更新人
+                    "sourcedata": " ",              //源数据
+                    "patientdata": "",              //用户数据
+                    "formdata": "",                  //模板数据
+                    "formname": "吃饭怎么办",            //模板名称
+                    "projectid": "1",               //项目id
+                    "u_follow_status": "2",         //状态  1:已完成随访（审核通过）； 2-6取消；7.保存；9提交（待审核）；10审核未通过
+                    commitlog:"[
+                        {
+                            userid: "kpjJ3IlAuN", 
+                            createtime: "2017-08-18 18:18:50", 
+                            status: "3", //9，提交了（待审核）10，被退回 1，审核通过
+                            username: "小华子哦"  //提交或审核通过或退回（按照上边状态判断）
+                        }
+                    ]"//记录
+                }
+            ]
+        }
+    </pre>    
+</div>
+</body>

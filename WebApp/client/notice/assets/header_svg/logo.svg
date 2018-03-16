@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="30px" viewBox="0 0 39 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="14.618561 0.338780488 0.49002439 0.338780488 0.49002439 21.1606829 14.618561 21.1606829 14.618561 0.338780488"></polygon>
+        <polygon id="path-3" points="0.134268293 26.3414634 13.0620732 26.3414634 13.0620732 0.0581707317 0.134268293 0.0581707317"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="项目内页" transform="translate(-12.000000, -12.000000)">
+            <g id="Page-1" transform="translate(12.000000, 12.000000)">
+                <polygon id="Fill-6" fill="#FFFFFF" points="0.000219512195 21.7396098 4.27704878 10.0110732 7.61729268 19.1874146 6.68729268 21.7396098"></polygon>
+                <g id="Group-10" transform="translate(24.146341, 0.392780)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-9"></g>
+                    <polygon id="Fill-8" fill="#FFFFFF" mask="url(#mask-2)" points="8.06831707 21.1606829 0.49002439 0.338487805 7.15660976 0.338487805 14.618561 21.1606829"></polygon>
+                </g>
+                <polygon id="Fill-11" fill="#FFFFFF" points="14.7815854 21.9940244 14.7793902 21.9881707 12.8264634 27.3435366 5.28841463 7.91817073 11.955 7.91817073 16.1659756 18.1979268"></polygon>
+                <g id="Group-15" transform="translate(13.902439, 3.319610)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-14"></g>
+                    <polygon id="Fill-13" fill="#FFFFFF" mask="url(#mask-4)" points="7.15719512 25.4184146 6.82134146 26.3418293 0.134268293 26.3418293 4.74695122 13.6935366 4.74841463 13.6993902 9.72182927 0.0581707317 13.0620732 9.2345122 7.16085366 25.419878"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

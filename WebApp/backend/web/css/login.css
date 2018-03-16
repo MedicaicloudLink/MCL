@@ -1,0 +1,138 @@
+* {margin: 0;padding: 0;}
+html, body {
+  font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  font-size: 16px;
+  line-height: 1;
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 64px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.logo .name {
+  font-size: 20px;
+  padding-left: 16px;
+}
+
+.center {
+  text-align: center;
+}
+
+.body {
+  background: #F1F4F9;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 80px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+.brand>img {
+  padding-left: 16px;
+}
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+}
+
+.card>p {
+  color: rgba(0,0,0,.54);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+input[type="email"], input[type="text"], input[type="password"] {
+  padding: 4px 12px;
+  font-size: 16px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 2px;
+  height: 30px;
+  width: 480px;
+  line-height: 30px;
+}
+
+input[type="email"]:focus, input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+  border-color: #458df1;
+}
+
+/* remove input[type=number] defult arrow style */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+a {
+  color: #458DF1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3C7BD3;
+}
+
+
+.btn {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background: #458df1;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #3C7BD3;
+}
+
+.btn[disabled] {
+  background: #BDBDBD;
+}
+
+#subBtn {
+  width: 96px;
+}
+
+.hint {
+  font-size: 20px;
+  color: rgba(0,0,0, .87);
+}
+
+#res_hint {
+  color: red;
+  padding-bottom: 64px;
+}

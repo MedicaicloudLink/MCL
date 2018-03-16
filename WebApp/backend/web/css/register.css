@@ -1,0 +1,244 @@
+* {margin: 0;padding: 0;-webkit-padding-start: 0px;box-sizing: border-box;}
+html, body {
+  font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+a {
+  color: #458df1;
+  text-decoration: none;
+}
+a:hover {
+  color: #3c7bd3;
+  text-decoration: underline;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+}
+.between {
+  justify-content: space-between;
+}
+
+.logo {
+  height: 64px;
+  background: #fff;
+  padding-left: 32px;
+  align-items: center;
+  font-size: 20px;
+  color: rgba(0,0,0,.87);
+}
+.logo img {
+  margin-right: 16px;
+}
+
+.body {
+  background: #f1f4f9;
+  align-items: center;
+  padding-top: 80px;
+}
+.body .des {
+  margin-top: 32px;
+  margin-bottom: 64px;
+  font-size: 20px;
+  color: rgba(0,0,0,.87);
+  align-items: center;
+}
+
+.form .form-option {
+  margin-bottom: 32px;
+}
+label {
+  color: rgba(0,0,0,.54);
+  margin-bottom: 16px;
+}
+.row {
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+input.name{
+  margin-right: 64px;
+}
+input, select{
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  border: 1px solid rgba(0,0,0,.12);
+  padding: 0 8px;
+  background: #fff;
+  font-size: 16px;
+  color: rgba(0,0,0,.87);
+}
+select {
+  width: 232px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance:none;
+  position: relative;  
+  background: #fff url("<?php echo Yii::$app->request->baseUrl?>/imgs/icon_triangle_8.svg") no-repeat right center;
+}
+input:focus {
+  border-color: #458df1!important;
+}
+input::-webkit-input-placeholder { 
+  color: rgba(0,0,0,.26);
+}
+input::-moz-placeholder { 
+  color: rgba(0,0,0,.26);
+}
+input:-moz-placeholder { 
+  color: rgba(0,0,0,.26);
+}
+input:-ms-input-placeholder {
+  color: rgba(0,0,0,.26);
+}
+input[type=checkbox]{
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  left: -9999px;
+  margin: 0;
+}
+input[type=checkbox] + label{
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  display: block;
+}
+input[type=checkbox] + label:before{
+  content: '';
+  border: 1px solid rgba(0, 0, 0, .12);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  background-color: #fff;  
+}
+input[type=checkbox] + label:after {
+  content: '';
+  width: 2px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-left: none;
+  border-top: none;
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  transform: rotate(0deg);
+  transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+  transform-origin: center;
+}
+input[type=checkbox]:checked + label:before {
+  background-color: #458df1;
+  border-color: #458df1;
+}
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: rotateZ(0deg);
+}
+input[type=checkbox]:checked + label:after {
+  transform: rotate(37deg);
+}
+
+.fixed-content{
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  padding-left: 8px;
+  letter-spacing: 0px;
+}
+
+.delete {
+  margin-left: 16px;
+  cursor: pointer;
+  padding: 12px 0;
+}
+.add {
+  width: 150px;
+  color: #458df1;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+.add img{
+  margin-right: 8px;
+}
+
+.msg-icon {
+  position: absolute;
+  right: 8px;
+  top: 12px;
+  display: none;
+  background: #fff;
+}
+
+.tools {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.btn {
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #458df1;
+  text-align: center;
+  color: #fff;
+}
+.btn.disable {
+  cursor: no-drop;
+  background: #bdbdbd!important;
+  border-color: #bdbdbd;
+}
+.btn-blue {
+  color: #fff;
+  background: #458df1;
+  margin-left: 16px;
+}
+.btn-blue:hover{
+  background: #3c7bd3;
+  color: #fff;
+}
+.btn-gray {
+  color: #458df1;
+  background: #fff;
+}
+.btn-gray:hover{
+  border-color: #3c7bd3;
+  color: #3c7bd3;
+}
+
+.keep{
+  color: red;
+}
+.res_hint {
+  font-size: 14px;
+  color: #e51c23;
+  display: none;
+}
+#msg{
+  color: #e51c23;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.inviteres {
+  align-items: center;
+}
+.succnum {
+  margin: 32px 0;
+  font-size: 20px;
+  color: rgba(0,0,0,.87);
+}
+.start-use {
+  margin-bottom: 64px;
+}

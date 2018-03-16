@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="40px" viewBox="0 0 32 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_表单</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(-37.000000, -124.000000)">
+            <g id="icon_表单" transform="translate(33.000000, 124.000000)">
+                <rect id="Rectangle-20" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="40" height="40"></rect>
+                <path d="M24,0 L4.99278641,0 C4.45236206,0 4,0.451644023 4,1.00877516 L4,38.9912248 C4,39.5507812 4.44448561,40 4.99278641,40 L35.0072136,40 C35.5476379,40 36,39.548356 36,38.9912248 L36,12 L25.0008717,12 C24.4481055,12 24,11.5553691 24,10.9991283 L24,2.22044605e-16 Z" id="Combined-Shape" fill="#458DF1"></path>
+                <rect id="Rectangle-26" fill="#FFFFFF" x="9" y="6" width="8" height="2"></rect>
+                <rect id="Rectangle-26" fill="#FFFFFF" transform="translate(13.000000, 7.000000) rotate(-270.000000) translate(-13.000000, -7.000000) " x="9" y="6" width="8" height="2"></rect>
+                <path d="M25,6.50764873 C25,5.95060953 25,5.04783004 25,4.50774618 L25,0.48720975 C25,-0.0602667309 25.3196386,-0.184445538 25.7021973,0.198113216 L35.7999668,10.2958827 C36.1877797,10.6836956 36.0512657,10.99808 35.5015437,10.99808 L26.0006204,10.99808 C25.447993,10.99808 25,10.5480705 25,9.98947132 L25,6.50764873 Z" id="Rectangle-25" fill="#458DF1"></path>
+                <rect id="Rectangle-28" fill="#FFFFFF" x="14" y="19" width="18" height="2"></rect>
+                <rect id="Rectangle-27" fill="#FFFFFF" x="8" y="25" width="2" height="2"></rect>
+                <rect id="Rectangle-28" fill="#FFFFFF" x="14" y="25" width="18" height="2"></rect>
+                <rect id="Rectangle-27" fill="#FFFFFF" x="8" y="31" width="2" height="2"></rect>
+                <rect id="Rectangle-28" fill="#FFFFFF" x="14" y="31" width="18" height="2"></rect>
+                <polygon id="Combined-Shape" fill="#FFFFFF" points="8.58989918 20.7213264 9.01416327 21.1455905 11.1354836 19.0242702 10.7112195 18.6000061 9.01419779 20.2970278 8.02423967 19.3070697 7.59997559 19.7313338 8.5899337 20.7212919"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

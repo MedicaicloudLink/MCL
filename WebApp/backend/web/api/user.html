@@ -1,0 +1,968 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <link rel='stylesheet' type='text/css' href='prettify.css'>
+    <script type='text/javascript' src='jquery.js'></script>
+    <script type='text/javascript' src='prettify.js'></script>
+    <script type='text/javascript'>$(window).load(function () {
+        $('pre').addClass('prettyprint');
+        prettyPrint();
+    })</script>
+    <title>用户相关</title>
+</head>
+
+<body>
+<!-- 创建表单 -->
+<div>
+    <p class="block">
+        <a name="createform" id="createform">创建表单</a></p>
+    <p class="url">
+        URL : user/createform<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>表单名</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>表单内容</th>
+            <th>sourcedata</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "创建失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "创建成功",
+            data: []
+        }
+    </pre>
+</div>
+<!-- 表单列表 -->
+<div>
+    <p class="block">
+        <a name="formlist" id="formlist">表单列表</a></p>
+    <p class="url">
+        URL : user/formlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>类型(选填)</th>
+            <th>type（已发布：publish）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "表单列表:",
+            "data": [
+                {
+                    "formid": "RPJD5vO4zD",         //表单id
+                    "name": "随访",                   //随访名称
+                    "share_userid": "",                 //分享人
+                    "update_time": "2017-06-13 14:57:48",   //更新时间
+                    "state": "1",                       //状态 1.未发布 2.已发布
+                    "s_username": "",                   //分享人名字
+                    "s_avatar": "",                  //分享人头像
+                    "sourcedata":"" //模板数据
+                },
+                {
+                    "formid": "B2CRHggsaT",
+                    "name": "基线",
+                    "share_userid": "1",
+                    "update_time": "2017-06-13 11:27:44",
+                    "state": "1",
+                    "s_username": "霍佳慧",
+                    "s_avatar": "medicayun.cn-bj.ufileos.com/149543652502c2b99975c8fe48139b71c0698e2b13.blob?UCloudPublicKey=ucloudzhexcel%40163.com14280235690001077411631&Signature=WgsyT2DTtDmvxh5Izy7A7F%2F8%2FfI%3D"
+                }
+            ]
+        }
+    </pre>
+</div>
+<!-- 表单数据预览 -->
+<div>
+    <p class="block">
+        <a name="formdata" id="formdata">表单数据预览</a></p>
+    <p class="url">
+        URL : user/formdata<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>表单id</th>
+            <th>formid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "表单列表:",
+            "data": {
+                "sourcedata": "{\"电话\": \"\", \"现居住地\": \"\", \"联系电话\": \"\"}",
+                "name": "随访",
+                "update_time": "",
+                "state": "1"//状态 1.未发布  2.已发布 3.已删除
+            }
+        }
+    </pre>
+</div>
+<!-- 分享表单 -->
+<div>
+    <p class="block">
+        <a name="shareform" id="shareform">分享表单</a></p>
+    <p class="url">
+        URL : user/shareform<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>分享人</th>
+            <th>share_userid</th>
+        </tr>
+        <tr>
+            <th>所属用户（分享给谁）</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>表单id</th>
+            <th>formid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "分享失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "分享成功",
+            data: []
+        }
+    </pre>
+</div>
+<!-- 删除表单 -->
+<div>
+    <p class="block">
+        <a name="deleteform" id="deleteform">删除表单</a></p>
+    <p class="url">
+        URL : user/deleteform<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>所属用户</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>表单id</th>
+            <th>formid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "删除失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "删除成功",
+            data: []
+        }
+    </pre>
+</div>
+<!-- 编辑表单 -->
+<div>
+    <p class="block">
+        <a name="editform" id="editform">编辑表单</a></p>
+    <p class="url">
+        URL : user/editform<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>修改人</th>
+            <th>update_userid</th>
+        </tr>
+        <tr>
+            <th>表单id</th>
+            <th>formid</th>
+        </tr>
+        <tr>
+            <th>表单名</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>表单内容</th>
+            <th>sourcedata</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "编辑失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "编辑成功",
+            data: []
+        }
+    </pre>
+</div>
+<!-- 发布/取消发布表单 -->
+<div>
+    <p class="block">
+        <a name="ispublishform" id="ispublishform">发布/取消发布表单</a></p>
+    <p class="url">
+        URL : user/ispublishform<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>表单id</th>
+            <th>formid</th>
+        </tr>
+        <tr>
+            <th>状态</th>
+            <th>state (1.取消发布 2.发布)</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "成功",
+            data: []
+        }
+    </pre>
+</div>
+<!-- 用户登录 -->
+<div>
+    <p class="block">
+        <a name="login" id="login">用户登录</a></p>
+    <p class="url">
+        URL : login/login<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户名</th>
+            <th>username</th>
+        </tr>
+        <tr>
+            <th>密码</th>
+            <th>password</th>
+        </tr>
+
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "登录失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "登录成功",
+            data: {
+                userid: "用户id"        
+            }
+        }
+    </pre>
+</div>
+<!-- 获取用户基本信息-->
+<div>
+    <p class="block">
+        <a name="userinfo" id="userinfo">获取用户基本信息</a></p>
+    <p class="url">
+        URL : user/userinfo<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+
+<!-- 编辑个人资料 -->
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "用户信息：",
+            "data": [
+                {
+                    "s_userid": "2",                //用户ID
+                    "s_username": "ljl",            //用户名称
+                    "s_formalname": "",             //姓名
+                    "s_userEmail": "",              //邮箱
+                    "s_cellphone": "15910952277",   //手机号
+                    "s_workphone": "15910952277",   //工作电话
+                    "s_address": ""                 //联系地址
+                    "s_avatar": ""                  //头像
+                    "s_sex": "1",                   //性别1：男 2：女
+                    "s_mybirthday": "",             //出生年月
+                    "s_mem": "",                    //自我描述
+                    "s_highschool": "",             //毕业院校
+                    "s_startdate": "",              //开始时间
+                    "s_enddate": "",                //结束时间
+                    "s_education": "",              //学历
+                    "s_addschool": "",              //添加院校
+                    "s_workunti": "医院",             //工作单位
+                    "u_hospital_code": "",          //医院ID
+                    "s_department": "脑血管",         //工作科室
+                    "s_work_startdate": "",         //开始时间
+                    "s_work_enddate": "",           //结束时间
+                    "s_job": "",                    //职务
+                    "s_joblevel": "",               //职称
+                    "s_department_mem": "",         //专业经历
+                    "s_Publish_worksname": "",      //作品名称
+                    "s_publish_date": "",           //发表时间
+                    "s_publish_unti": "",           //发表单位
+                    "s_worklink": "",               //作品链接
+                    "s_newwork": "",                //添加新作品
+                    "s_Expertise": "",              //擅长领域
+                    "s_other_table": "",            //其他诊断的表名
+                    "s_update_time": "2017-02-22 11:56:37"   //最后一次更新的时间
+    }
+  ]
+}
+    </pre>
+</div>
+
+<div>
+    <p class="block">
+        <a name="login" id="usersetting">编辑个人资料</a></p>
+    <p class="url">
+        URL : user/usersetting<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户资料</th>
+            <th>userInfo</th>
+        </tr>
+        <tr>
+            <th>字段范围</th>
+            <th>s_userid                : 用户ID；&nbsp;&nbsp;
+                s_username              : 姓名；&nbsp;&nbsp;
+                s_userEmail             : Email(用于验证)；&nbsp;&nbsp;
+                s_cellphone             : 用户电话号码；&nbsp;&nbsp;
+                s_workphone             : 工作电话号码；&nbsp;&nbsp;
+                s_address               : 联系地址；&nbsp;&nbsp;
+                s_avatar                : 头像；&nbsp;&nbsp;
+                s_sex                   : 性别  1：男 2：女；&nbsp;&nbsp;
+                s_mybirthday            : 出生年月；&nbsp;&nbsp;
+                s_mem                   : 自我描述；&nbsp;&nbsp;
+                s_highschool            : 毕业院校；&nbsp;&nbsp;
+                s_startdate             : 开始时间；&nbsp;&nbsp;
+                s_enddate               : 结束时间；&nbsp;&nbsp;
+                s_education             : 学历；&nbsp;&nbsp;
+                s_addschool             : 添加院校；&nbsp;&nbsp;
+                s_workunti              : 工作单位；&nbsp;&nbsp;
+                u_hospital_code         : 医院ID；&nbsp;&nbsp;
+                s_department            : 工作科室；&nbsp;&nbsp;
+                s_work_startdate        : 开始时间；&nbsp;&nbsp;
+                s_work_enddate          : 结束时间；&nbsp;&nbsp;
+                s_job                   : 职务；&nbsp;&nbsp;
+                s_joblevel              : 职称；&nbsp;&nbsp;
+                s_department_mem        : 专业经历；&nbsp;&nbsp;
+                s_Publish_worksname     : 作品名称；&nbsp;&nbsp;
+                s_publish_date          : 发表时间；&nbsp;&nbsp;
+                s_publish_unti          : 发表单位；&nbsp;&nbsp;
+                s_worklink              : 作品链接；&nbsp;&nbsp;
+                s_newwork               : 添加新作品；&nbsp;&nbsp;
+                s_Expertise             : 擅长领域；&nbsp;&nbsp;
+                s_other_table           : 其他诊断的表名；&nbsp;&nbsp;
+                s_update_time           : 最后一次更新的时间</th>
+        </tr>
+
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "参数错误",
+            data:[]
+        }
+        -------
+        {
+            code: "err",
+            message: "参数非法",
+            data:[]
+        }
+        -------
+        {
+            code: "err",
+            message: "操作失败",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "修改成功",
+            "data": "用户ID"
+        }
+    </pre>
+</div>
+<!-- 修改用户密码 -->
+<div>
+    <p class="block">
+        <a name="uppassword" id="uppassword">修改用户密码</a></p>
+    <p class="url">
+        URL : user/uppassword<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>原密码</th>
+            <th>oldpassword</th>
+        </tr>
+        <tr>
+            <th>新密码</th>
+            <th>newpassword</th>
+        </tr>
+        <tr>
+            <th>第二次输入密码</th>
+            <th>repassword</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "修改成功",
+            "data": []
+        }
+        -----------------------------
+        {
+            "code": "err",
+            "message": "原密码输入错误",
+            "data": []
+        }
+        ------------------------------
+        {
+            "code": "err",
+            "message": "两次输入不一致",
+            "data": []
+        }
+    </pre>
+</div>
+
+<div>
+    <p class="block">
+        <a name="getprojects" id="getprojects">获取用户参与的项目列表</a></p>
+    <p class="url">
+        URL : user/getprojects<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "err",
+            message: "缺少参数",
+            data:[]
+        }
+        -----------------------------
+        {
+            code: "succ",
+            message: "用户参加项目列表：",
+            {
+                u_projectID: "2",
+                u_projectName: "项目二",
+                u_projectMem: "简介2",
+                u_projectstate: "1"
+            },{
+                u_projectID: "3",
+                u_projectName: "项目三",
+                u_projectMem: "简介3",
+                u_projectstate: "0"
+            },
+            {
+                u_projectID: "5",
+                u_projectName: "项目五",
+                u_projectMem: "简介5",
+                u_projectstate: "1"
+            }
+                    ···
+        }
+    </pre>
+</div>
+<!-- 申请加入项目列表 -->
+<div>
+    <p class="block">
+        <a name="applyprojectlist" id="applyprojectlist">获取用户参与的项目列表</a></p>
+    <p class="url">
+        URL : user/applyprojectlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "申请列表：",
+            "data": [
+                {
+                    "id": "32",                     //列表id
+                    "userid": "135",                //申请人id
+                    "projectid": "1",               //项目id
+                    "status": "0",
+                    "createtime": "2017-02-27 08:47:05",    //申请时间
+                    "updatetime": "",
+                    "adminid": "1",
+                    "s_username": "雨奇",             //申请用户名
+                    "s_sex": "1",                   //性别
+                    "s_mybirthday": "",             //生日
+                    "s_workunti": "北京阜外医院"          //工作单位
+                 },
+                 {
+                    "id": "23",
+                    "userid": "124",
+                    "projectid": "1",
+                    "status": "0",
+                    "createtime": "2017-02-27 04:16:10",
+                    "updatetime": "2017-02-27 04:29:43",
+                    "adminid": "1",
+                    "s_username": "",
+                    "s_sex": "",
+                    "s_mybirthday": "",
+                    "s_workunti": ""
+                 }
+                    ]
+        }
+    </pre>
+</div>
+<!-- noticelist -->
+<div>
+    <p class="block">
+        <a name="noticelist" id="noticelist">通知列表</a></p>
+    <p class="url">
+        URL : user/noticelist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "通知列表：",
+            "data": [
+                {
+                    "messageid": "14",                 //消息id
+                    "content": "小红申请加入阜外CT随访",       //内容
+                    "type": "1",                       //通知类型   1：申请加入项目；2：退出项目 3：处理结果 4:返回给用户的结果
+                    "createtime": "2017-03-14 14:25:07",  //更新时间
+                    "logid": "41",                    //记录id
+                    "status": "0",                     //处理状态   0未处理 1.已同意  2已拒绝
+                    "fromimg":"",                   //头像
+                    "fromname":"hjh"               //来自谁
+                },
+                {
+                    "messageid": "9",
+                    "content": "hjh同意了huohuo加入阜外CT随访",
+                    "type": "3",
+                    "createtime": "2017-03-14 14:14:04",
+                    "logid": "40",
+                    "status": "1",
+                    "fromimg":"",                   //头像
+                    "fromname":"hjh"               //来自谁
+                }
+            ]
+        }
+    </pre>
+</div>
+<!-- 处理通知 -->
+<div>
+    <p class="block">
+        <a name="handlenotice" id="handlenotice">处理通知</a></p>
+    <p class="url">
+        URL : user/handlenotice<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>记录ID  （通知列表里的logid）</th>
+            <th>noticeid</th>
+        </tr>
+        <tr>
+            <th>状态</th>
+            <th>status   （1.已同意  2已拒绝）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "处理成功",
+            "data": []
+        }
+        -----------------------------
+        {
+            "code": "err",
+            "message": "处理失败",
+            "data": []
+        }
+    </pre>
+</div>
+<!-- 上传图片-->
+<div>
+    <p class="block">
+        <a name="picture" id="picture">上传图片</a></p>
+    <p class="url">
+        URL : user/picture<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>图片</th>
+            <th>UploadForm[file] &nbsp;&nbsp;例如："input type='file' name='<font color='red'>UploadForm[file]</font>'"</th>
+        </tr>
+        
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "ufileurl:",
+            data: {
+                ufileurl: "hjh.cn-bj.ufileos.com/14875781249dfed532b7deb0cc48db69a9cb35e44d.jpg?UCloudPublicKey=YmzEWKiZJF76YO8HcEw9mmqzwTU9V7jOOrUSQksPd5JMZEfjoxCnhw%3D%3D&Signature=Deihe2dyvzlCVHs%2BTVrdAzvC0T0%3D"
+            }
+        }
+    </pre>
+</div>
+<!-- 药品名查询-->
+<div>
+    <p class="block">
+        <a name="selectdrug" id="selectdrug">药品查询</a></p>
+    <p class="url">
+        URL : user/selectdrug<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>药名</th>
+            <th>drugname</th>
+        </tr>
+        
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "药品列表：",
+            "data": [
+                {
+                    "u_drugname": "18种氨基酸注射液",
+                    "u_generalname": "",
+                    "u_specifications": "",
+                    "u_unit": "",
+                    "u_company": ""
+                },
+                {
+                    "u_drugname": "30/70混合重组人胰岛素注射液",
+                    "u_generalname": "",
+                    "u_specifications": "",
+                    "u_unit": "",
+                    "u_company": ""
+                }
+            ]
+        }
+    </pre>
+</div>
+<!-- 药品名查询-->
+<div>
+    <p class="block">
+        <a name="shortpinyin" id="shortpinyin">中文首字母</a></p>
+    <p class="url">
+        URL : user/shortpinyin<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>汉字</th>
+            <th>string</th>
+        </tr>
+        
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "Chinese2shortpinyin",
+            "data": {
+                "shortpinyin": "hjh"
+            }
+        }
+    </pre>
+</div>
+<!-- 所有通知-->
+<div>
+    <p class="block">
+        <a name="allnotice" id="allnotice">所有通知</a></p>
+    <p class="url">
+        URL : user/allnotice<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>页数</th>
+            <th>page</th>
+        </tr>
+        <tr>
+            <th>通知类型(all:全部；nodo:未处理；105:同意成为联系人;106:拒绝成为联系人;205:同意进入项目；206：拒绝进项目；return：退回项目)</th>
+            <th>type</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "通知列表：",
+            "data": {
+                "result": [
+                    {
+                        "id": "TkvbT9mDla",//通知id
+                        "userid": "138",    //发起通知的用户id
+                        "type": "102",      //类型   见下方
+                        "createtime": "2017-09-12 11:07:39",//创建时间
+                        "projectid": "",//邀请加入项目的项目id
+                        "recordid": "",//类型为退回的病例才有
+                        "s_username": "小红"//发起通知的用户名
+                    }
+                ],
+                "count": "1"
+            }
+        }
+        ---------------------------------------
+         102：申请加好友发出的通知；
+         103：同意加好友发出的通知；
+         104：拒绝加好友发出的通知；
+         105：同意加好友状态；
+         106：拒绝加好友状态；
+         201：自己邀请加项目记录；
+         202：邀请加项目发出的通知；
+         203：同意加项目发出的通知；
+         204：拒绝加项目发出的通知；
+         205：同意加项目状态；
+         206：拒绝加项目状态；
+         301：退回基线病例
+         302：退回随访病例
+    </pre>
+</div>
+<!-- 未读通知数-->
+<div>
+    <p class="block">
+        <a name="noreadnum" id="noreadnum">未读通知数</a></p>
+    <p class="url">
+        URL : user/noreadnum<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "未读条数：",
+            "data": [2]
+        }
+    </pre>
+</div>
+<!-- 邀请用户-->
+<div>
+    <p class="block">
+        <a name="inviteuser" id="inviteuser">邀请用户</a></p>
+    <p class="url">
+        URL : user/inviteuser<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>手机号</th>
+            <th>mobile</th>
+        </tr>
+        <tr>
+            <th>项目id（项目中邀请用户注册需要，联系人中不需要）</th>
+            <th>projectid（项目中邀请用户注册需要，联系人中不需要）</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "好了",
+            "data": []
+        }
+    </pre>
+</div>
+</body>

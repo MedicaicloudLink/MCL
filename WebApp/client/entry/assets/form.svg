@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="81px" viewBox="0 0 100 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>报告表编辑</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设计" transform="translate(-898.000000, -175.000000)">
+            <g id="报告表编辑" transform="translate(898.000000, 176.000000)">
+                <rect id="Rectangle-Copy-3" fill="#FFFFFF" x="0" y="0" width="100" height="80"></rect>
+                <rect id="Rectangle-20" fill-opacity="0" fill="#FFFFFF" x="10" y="0" width="80" height="80"></rect>
+                <path d="M58,0 L19.0052872,0 C18.4428625,0 18,0.446378735 18,0.997014809 L18,79.0029852 C18,79.550093 18.4500824,80 19.0052872,80 L80.9947128,80 C81.5571375,80 82,79.5536213 82,79.0029852 L82,24 L58.9927864,24 C58.4444856,24 58,23.5476379 58,23.0072136 L58,-6.66133815e-16 Z" id="Combined-Shape" fill="#458DF1"></path>
+                <rect id="Rectangle-26" fill="#FFFFFF" x="28" y="16" width="16" height="4"></rect>
+                <rect id="Rectangle-26" fill="#FFFFFF" transform="translate(36.000000, 18.000000) rotate(-270.000000) translate(-36.000000, -18.000000) " x="28" y="16" width="16" height="4"></rect>
+                <path d="M60,11.9934838 C60,11.4437375 60,10.5420818 60,9.9950848 L60,-0.00517294396 C60,-0.559111938 60.3164419,-0.691726303 60.7136995,-0.294468706 L82.2906287,21.2824605 C82.6847941,21.6766259 82.5653279,21.99616 82.0010689,21.99616 L61.0032593,21.99616 C60.4491745,21.99616 60,21.5514007 60,21.0007563 L60,11.9934838 Z" id="Rectangle-25" fill="#458DF1"></path>
+                <rect id="Rectangle-28" fill="#FFFFFF" x="38" y="38" width="36" height="4"></rect>
+                <rect id="Rectangle-27" fill="#FFFFFF" x="26" y="50" width="4" height="4"></rect>
+                <rect id="Rectangle-28" fill="#FFFFFF" x="38" y="50" width="36" height="4"></rect>
+                <rect id="Rectangle-27" fill="#FFFFFF" x="26" y="62" width="4" height="4"></rect>
+                <rect id="Rectangle-28" fill="#FFFFFF" x="38" y="62" width="36" height="4"></rect>
+                <polygon id="Combined-Shape" fill="#FFFFFF" points="27.1797984 41.4426529 28.0283265 42.2911811 32.2709672 38.0485404 31.4224391 37.2000122 28.0283956 40.5940557 26.0484793 38.6141395 25.1999512 39.4626676 27.1798674 41.4425839"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

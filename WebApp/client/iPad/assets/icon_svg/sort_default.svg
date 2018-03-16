@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="10px" viewBox="0 0 8 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>排序-默认</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.12">
+        <g id="项目首页-退回的病历" transform="translate(-308.000000, -284.000000)" fill="#000000">
+            <g id="排序-默认" transform="translate(308.000000, 284.000000)">
+                <g id="首页" transform="translate(0.000000, 6.000000)">
+                    <path d="M0.229824201,0.707061 C-0.167215799,0.316562 -0.0329957987,0 0.502804201,0 L7.4679842,0 C8.0157942,0 8.1380842,0.316493 7.7409742,0.707061 L4.7042942,3.693719 C4.3072642,4.084218 3.6636042,4.084287 3.2664942,3.693719 L0.229824201,0.707061 L0.229824201,0.707061 L0.229824201,0.707061 Z" id="Triangle-3"></path>
+                </g>
+                <g id="首页" transform="translate(4.000000, 2.000000) rotate(-180.000000) translate(-4.000000, -2.000000) ">
+                    <path d="M0.229824201,0.707061 C-0.167215799,0.316562 -0.0329957987,0 0.502804201,0 L7.4679842,0 C8.0157942,0 8.1380842,0.316493 7.7409742,0.707061 L4.7042942,3.693719 C4.3072642,4.084218 3.6636042,4.084287 3.2664942,3.693719 L0.229824201,0.707061 L0.229824201,0.707061 L0.229824201,0.707061 Z" id="Triangle-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

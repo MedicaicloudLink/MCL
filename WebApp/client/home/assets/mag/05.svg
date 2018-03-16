@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>05</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-100.000000, -1720.000000)" stroke="#458DF1">
+            <g id="05" transform="translate(100.000000, 1720.000000)">
+                <circle id="Oval-Copy-4" stroke-opacity="0.12" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <rect id="Rectangle-10" stroke-width="4" x="50" y="62" width="60" height="48" rx="2"></rect>
+                <rect id="Rectangle-10-Copy-2" stroke-width="4" x="66" y="49.9745322" width="28" height="12" rx="2"></rect>
+                <rect id="Rectangle-10-Copy" stroke-width="4" transform="translate(80.000000, 74.000000) scale(1, -1) translate(-80.000000, -74.000000) " x="50" y="74" width="60" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-10-Copy-3" stroke-width="4" x="71" y="91" width="18" height="2" rx="1"></rect>
+                <rect id="Rectangle-10-Copy-3" stroke-width="4" transform="translate(80.000000, 92.000000) rotate(-270.000000) translate(-80.000000, -92.000000) " x="71" y="91" width="18" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+    
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <link rel='stylesheet' type='text/css' href='prettify.css'>
+        <script type='text/javascript' src='jquery.js'></script>
+        <script type='text/javascript' src='prettify.js'></script>
+        <script type='text/javascript'>$(window).load(function(){ $('pre').addClass('prettyprint');prettyPrint();})</script>
+        <title>联系人</title>
+    </head>
+    
+<body>
+<!-- 搜索用户 -->
+<div>
+   <p class="block">
+   <a name="searchuser" id="searchuser">搜索用户</a></p>
+    <p class="url">
+        URL : contact/searchuser<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>手机号</th>
+            <th>mobile</th>
+        </tr>
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "用户信息：",
+            "data": {
+                "s_userid": "138",      //用户id
+                "s_username": "小红",     //用户名
+                "s_workunti": "医院",     //工作单位
+                "s_cellphone": "15710952287",//手机号
+                "type": 2               //1：已经是好友；2：不是好友；3：搜的是自己 ；4：不是用户
+            }
+        }
+    </pre>    
+</div>
+<!-- 添加好友 -->
+<div>
+   <p class="block">
+   <a name="addcontacter" id="addcontacter">添加好友</a></p>
+    <p class="url">
+        URL : contact/addcontacter<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>好友id</th>
+            <th>touserid</th>
+        </tr>
+       
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "err",
+            "message": "失败",
+            "data": []
+        }
+        ----------------------------
+        {
+            "code": "succ",
+            "message": "成功",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 同意/拒绝申请 -->
+<div>
+   <p class="block">
+   <a name="doapply" id="doapply">同意/拒绝申请</a></p>
+    <p class="url">
+        URL : contact/doapply<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>申请人id</th>
+            <th>touserid</th>
+        </tr>
+       <tr>
+            <th>同意/拒绝(2:同意好友 ；3：拒绝)</th>
+            <th>status</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "处理成功",
+            "data": []
+        }
+    </pre>    
+</div>
+<!-- 联系人列表-->
+<div>
+   <p class="block">
+   <a name="contactmanlist" id="contactmanlist">联系人列表</a></p>
+    <p class="url">
+        URL : contact/contactmanlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>页数</th>
+            <th>page</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+    "code": "succ",
+    "message": "联系人列表：",
+    "data": {
+        "result": [
+            {
+                "s_username": "录入人",        //姓名
+                "s_cellphone": "18613861417",   //手机号
+                "s_workunti": "北京阜外",       //工作单位
+                "touserid": "139"           //好友id
+            },
+            {
+                "s_username": "小红",
+                "s_cellphone": "15710952287",
+                "s_workunti": "医院",
+                "touserid": "138"
+            }
+        ],
+        "count": "2"
+    }
+}
+    </pre>    
+</div>
+<!-- 搜索联系人-->
+<div>
+   <p class="block">
+   <a name="searchcontact" id="searchcontact">搜搜联系人</a></p>
+    <p class="url">
+        URL : contact/searchcontact<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>搜索类型（1：首字母；2：手机号或姓名）</th>
+            <th>type</th>
+        </tr>
+        <tr>
+            <th>搜索内容</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>页数</th>
+            <th>page</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "搜索结果:",
+            "data": {
+                "result": [
+                    {
+                        "s_username": "刘帅",             //联系人姓名
+                        "s_cellphone": "18610792737",       //手机号
+                        "s_workunti": "昂",              //工作单位
+                        "touserid": "130"               //用户id
+                    }
+                ],
+                "count": "1", //总数
+                "flag": 1     //1：是联系人 ；2：不是联系人，但是注册用户；3：不是注册用户
+            }
+        }
+    </pre>    
+</div>
+<!-- 联系人详情-->
+<div>
+   <p class="block">
+   <a name="contactmaninfo" id="contactmaninfo">联系人详情</a></p>
+    <p class="url">
+        URL : contact/contactmaninfo<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>联系人id</th>
+            <th>touserid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+    "code": "succ",
+    "message": "详情 ：",
+    "data": {
+        "s_userid": "140",
+        "s_username": "赵雷生",
+        "s_workunti": "北京梅地卡尔科技有限公司",
+        "s_sex": "1",
+        "s_mybirthday": "",
+        "s_department": "",  //工作科室
+        "s_joblevel": "总经理",//职称
+        "s_job": "",    //职务
+        "s_cellphone": "13501299298",
+        "s_userEmail": "leisheng_zhao@medicayun.cn",
+        "s_avatar": "medicayun.cn-bj.ufileos.com/1501656846badecafebe62a8d6d818f6915ebd4690.blob?UCloudPublicKey=ucloudzhexcel%40163.com14280235690001077411631&Signature=Voc2BS5C%2Ff6M%2BkRC3xqz12mfD2E%3D",
+        "project": [
+            {
+                "type": 1,            //1：进行中；2：已结束
+                "projectname": "我们大医院",
+                "projectid": "62",
+                "adminname": "小华子哦"
+            },
+            {
+                "type": 1,
+                "projectname": "空气问卷",
+                "projectid": "71",
+                "adminname": "李明敏"
+            }
+        ]
+    }
+}
+    </pre>    
+</div>
+<!-- 删除联系人-->
+<div>
+   <p class="block">
+   <a name="deletecontactman" id="deletecontactman">删除联系人</a></p>
+    <p class="url">
+        URL : contact/deletecontactman<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>好友id(多个用,隔开)</th>
+            <th>touserid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+    "code": "succ",
+    "message": "",
+    "data": {
+        
+    }
+}
+    </pre>    
+</div>
+</body>

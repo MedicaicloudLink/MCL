@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>03</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-100.000000, -1160.000000)" stroke="#458DF1">
+            <g id="03" transform="translate(100.000000, 1160.000000)">
+                <circle id="Oval-Copy-2" stroke-opacity="0.12" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <path d="M80,56 L102,56 L102,56 C103.104569,56 104,56.8954305 104,58 L104,76 M80,104 L58,104 L58,104 C56.8954305,104 56,103.104569 56,102 L56,84" id="Rectangle-16" stroke-width="4"></path>
+                <circle id="Oval-3" stroke-width="4" cx="62" cy="59" r="7"></circle>
+                <circle id="Oval-3-Copy-2" stroke-width="4" cx="98" cy="90" r="7"></circle>
+                <path d="M73.8340831,77 C72.8819269,71.3245733 67.9459926,67 62,67 C56.0540074,67 51.1180731,71.3245733 50.1659169,77 L73.8340831,77 Z" id="Oval-3-Copy" stroke-width="4"></path>
+                <path d="M109.834083,108 C108.881927,102.324573 103.945993,98 98,98 C92.0540074,98 87.1180731,102.324573 86.1659169,108 L109.834083,108 Z" id="Oval-3-Copy-3" stroke-width="4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

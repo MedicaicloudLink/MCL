@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>04</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-100.000000, -1440.000000)">
+            <g id="04" transform="translate(100.000000, 1440.000000)">
+                <circle id="Oval-Copy-3" stroke-opacity="0.12" stroke="#458DF1" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <path d="M77.1298038,105 L110,78.7727449 L110,55 L50,55 L50,105 L77.1298038,105 Z" id="Rectangle-17" stroke="#458DF1" stroke-width="4"></path>
+                <rect id="Rectangle-7" fill="#FFFFFF" x="76" y="78" width="38" height="36"></rect>
+                <path d="M95.9343372,101.692938 C95.9368185,101.733727 95.9380772,101.774847 95.9380772,101.81626 L95.9380772,114.81626 C95.9380772,115.920829 95.0426467,116.81626 93.9380772,116.81626 C92.8335077,116.81626 91.9380772,115.920829 91.9380772,114.81626 L91.9380772,101.81626 C91.9380772,101.774847 91.9393359,101.733727 91.9418171,101.692938 L91.9268293,101.691066 L91.9417176,101.935813 C91.9392893,101.895896 91.9380772,101.856019 91.9380772,101.81626 L91.9380772,114.81626 C91.9380772,113.71169 92.8335077,112.81626 93.9380772,112.81626 C95.0426467,112.81626 95.9380772,113.71169 95.9380772,114.81626 L95.9380772,101.81626 C95.9380772,101.856019 95.936865,101.895896 95.9344368,101.935813 L95.949325,101.691066 L95.9343372,101.692938 Z M95.9380772,114.81626 C95.9380772,115.920829 95.0426467,116.81626 93.9380772,116.81626 C92.8335077,116.81626 91.9380772,115.920829 91.9380772,114.81626 L91.9380772,101.81626 C84.0473834,100.710403 77.9380772,93.976784 77.9380772,85.81626 C77.9380772,76.979704 85.1015212,69.81626 93.9380772,69.81626 C102.774633,69.81626 109.938077,76.979704 109.938077,85.81626 C109.938077,93.976784 103.828771,100.710403 95.9343372,101.692938 C95.9359914,101.720131 95.937238,106.094572 95.9380772,114.81626 Z" id="Combined-Shape" fill="#458DF1" fill-rule="nonzero" transform="translate(93.938077, 93.316260) rotate(-45.000000) translate(-93.938077, -93.316260) "></path>
+                <circle id="Oval-4" fill="#FFFFFF" cx="88.6000061" cy="88" r="12"></circle>
+                <rect id="Rectangle-17-Copy" stroke="#458DF1" stroke-width="4" x="58" y="65" width="44" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-17-Copy-2" stroke="#458DF1" stroke-width="4" x="58" y="75" width="13" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-17-Copy-3" stroke="#458DF1" stroke-width="4" x="58" y="85" width="9" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-17-Copy-5" stroke="#458DF1" stroke-width="4" x="83" y="84" width="11" height="1" rx="0.5"></rect>
+                <rect id="Rectangle-17-Copy-6" stroke="#458DF1" stroke-width="4" x="83" y="92" width="11" height="1" rx="0.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1347 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+    
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+        <link rel='stylesheet' type='text/css' href='prettify.css'>
+        <script type='text/javascript' src='jquery.js'></script>
+        <script type='text/javascript' src='prettify.js'></script>
+        <script type='text/javascript'>$(window).load(function(){ $('pre').addClass('prettyprint');prettyPrint();})</script>
+        <title>项目相关</title>
+    </head>
+    
+<body>
+<!-- pc管理端项目列表 -->
+<div>
+   <p class="block">
+   <a name="pcprojectlist" id="pcprojectlist">pc管理端项目列表</a></p>
+    <p class="url">
+        URL : project/pcprojectlist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "pc管理端项目列表:",
+            "data": [
+                {
+                    "u_projectID": "6",         //项目id
+                    "u_projectName": "测试项目4",       //名称
+                    "u_templeateID": "5",           //模板
+                    "u_projectMem": "ceshixiangmumu",   //简介
+                    "u_projecttime": "2017-06-02",  //创建时间
+                    "u_projectstate": "1",          //1公开  0不公开
+                    "u_createuserid": "23",             //创建人
+                    "starttime": "2017-05-22 00:00:00", //开始时间
+                    "endtime": "2979-02-23 00:00:00",   //结束时间
+                    "permit": ""            //值为1，可以删除   值为空，不可以删除
+                },
+                {
+                    "u_projectID": "4",
+                    "u_projectName": "测试项目2",
+                    "u_templeateID": "5",
+                    "u_projectMem": "ceshixiangmumu",
+                    "u_projecttime": "2017-05-31",
+                    "u_projectstate": "1",
+                    "u_createuserid": "1",
+                    "starttime": "",
+                    "endtime": "",
+                    "permit": 1
+                },
+            ]
+        }
+
+    </pre>    
+</div>
+<!-- 删除项目 -->
+<div>
+   <p class="block">
+   <a name="deleteproject" id="deleteproject">删除项目</a></p>
+    <p class="url">
+        URL : project/deleteproject<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "删除成功",
+            "data": []
+        }
+        -------------------------
+        {
+            "code": "err",
+            "message": "删除失败",
+            "data": []
+        }
+
+    </pre>    
+</div>
+<!-- 编辑项目 -->
+<div>
+   <p class="block">
+   <a name="editproject" id="editproject">编辑项目</a></p>
+    <p class="url">
+        URL : project/editproject<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>项目名称</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>模板id</th>
+            <th>templateid(选填)</th>
+        </tr>
+        <tr>
+            <th>项目介绍</th>
+            <th>projectmem</th>
+        </tr>
+        <tr>
+            <th>开始时间</th>
+            <th>starttime</th>
+        </tr>
+        <tr>
+            <th>结束时间</th>
+            <th>endtime</th>
+        </tr>
+        <tr>
+            <th>0.不公开  1.公开</th>
+            <th>status</th>
+        </tr>
+        <tr>
+            <th>表单名称</th>
+            <th>formname</th>
+        </tr>
+        <tr>
+            <th>表单数据</th>
+            <th>formdata</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "编辑成功",
+            "data": []
+        }
+        -------------------------
+        {
+            "code": "err",
+            "message": "编辑失败",
+            "data": []
+        }
+
+    </pre>    
+</div>
+<!-- 项目中任务列表 -->
+<div>
+   <p class="block">
+   <a name="tasklist" id="tasklist">项目中任务列表</a></p>
+    <p class="url">
+        URL : project/tasklist<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "任务列表：",
+            "data": [
+            {
+              "taskid": "4D3B59XKU4_1",      //任务id
+              "taskname": "基线"              //任务名称
+              "type": "1"              //任务类型 1.基线   2.随访
+            },
+            {
+              "taskid": "fA8hCboRDo_2",
+              "taskname": "随访访"
+            },
+            {
+              "taskid": "CsGRVQ7jDR_2",
+              "taskname": "随访2"
+            },
+            {
+              "taskid": "qHp5oOmQeT_2",
+              "taskname": "1"
+            }
+          ]
+        }
+        
+
+    </pre>    
+</div>
+<!-- 分配任务 -->
+<div>
+   <p class="block">
+   <a name="addusertask" id="addusertask">分配任务</a></p>
+    <p class="url">
+        URL : project/addusertask<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>操作人</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>任务id</th>
+            <th>taskid(多个用,隔开)</th>
+        </tr>
+        <tr>
+            <th>成员id</th>
+            <th>memberid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "添加成功：",
+            "data": []
+        }
+        
+
+    </pre>    
+</div>
+<!-- 创建项目 -->
+<div>
+   <p class="block">
+   <a name="applyproject" id="applyproject">申请加入项目</a></p>
+    <p class="url">
+        URL : project/applyproject<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>申请者</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目</th>
+            <th>projectid</th>
+        </tr>
+        
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "申请成功",
+            "data": []
+        }
+        
+
+    </pre>    
+</div>
+<!-- 创建项目 -->
+<div>
+   <p class="block">
+   <a name="addproject" id="addproject">创建项目</a></p>
+    <p class="url">
+        URL : user/addproject<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>创建者</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目名称</th>
+            <th>name</th>
+        </tr>
+        <tr>
+            <th>模板id</th>
+            <th>templateid</th>
+        </tr>
+        <tr>
+            <th>项目介绍</th>
+            <th>projectmem</th>
+        </tr>
+        <tr>
+            <th>开始时间</th>
+            <th>starttime</th>
+        </tr>
+        <tr>
+            <th>结束时间</th>
+            <th>endtime</th>
+        </tr>
+        <tr>
+            <th>0.不公开  1.公开</th>
+            <th>status</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "新项目id：",
+            data: {
+                projectid: 项目id
+            }
+        }
+    </pre>    
+</div>
+
+<!-- 终止项目 -->
+<div>
+    <p class="block">
+        <a name="endproject" id="endproject">创建项目</a></p>
+    <p class="url">
+        URL : user/endproject<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（管理员）</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>name</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "项目已关闭",
+            data: {
+                项目id
+            }
+        }
+    </pre>
+</div>
+
+<!-- 所有进行中项目 -->
+<div>
+    <p class="block">
+        <a name="addproject" id="allprojects">所有进行中项目</a></p>
+    <p class="url">
+        URL : project/allprojects<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>无</th>
+            <th></th>
+        </tr>
+
+    </table>
+    <pre>
+    返回数据<br>
+        {
+          "code": "succ",
+          "message": "所有进行中项目",
+          "data": [
+            {
+              "u_projectID": "1",
+              "u_projectName": "阜外CT随访",
+              "u_templeateID": "11",
+              "u_projectMem": "全国医学冠脉 CT 随访",
+              "u_projecttime": "2017-02-01",
+              "u_projectstate": "1",
+              "u_createuserid": "1"
+            },
+            {
+              "u_projectID": "2",
+              "u_projectName": "52病房",
+              "u_templeateID": "",
+              "u_projectMem": "冠心病小组",
+              "u_projecttime": "2017-03-23",
+              "u_projectstate": "1",
+              "u_createuserid": "23"
+            }
+          ]
+        }
+    </pre>
+</div>
+
+<!-- 项目详情 -->
+<div>
+   <p class="block">
+   <a name="getprojects" id="projectdetail">项目详情</a></p>
+    <p class="url">
+        URL : project/projectdetail<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "项目详情",
+            data: [
+                {
+                    "u_projectID": "1", //项目id
+                    "u_projectName": "CREATION-CHINA项目",    //项目名称
+                    "u_templeateID": "11",                  //模板信息
+                    "u_projectMem": "中国冠状动脉粥样硬化病变无创影像学早期识别及风险分层的队列研究",  //简介
+                    "u_projecttime": "2017-02-01",      //创建时间
+                    "u_projectstate": "1",              //公开状态  1.公开  0.不公开
+                    "starttime": "",                    //开始时间
+                    "endtime": "",                      //结束时间
+                    "formname": "随访",                   //表单名称
+                    "formdata": "{\"电话\": \"\", \"现居住地\": \"\", \"联系电话\": \"\"}",
+                    "s_username": "霍佳慧"                 //创建人
+                }
+            ]
+        }
+    </pre>    
+</div>
+
+<!-- 获取项目参与中心列表 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="centerlistbyprojectid">获取项目参与中心列表</a></p>
+    <p class="url">
+        URL : project/centerlistbyprojectid<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "中心列表",
+            "data": [
+                {
+                    "u_centerID": "IjurZY3lPW", //中心id
+                    "u_centernum": "3",         //中心编码
+                    "u_centername": "3",        //中心名称
+                    "u_centerlead": "3",        //中心负责人
+                    "u_centeradr": "3",         //中心地址
+                    "u_centerphone": "3",       //中心电话
+                    "u_centeremail": "3",       //中心邮箱
+                    "u_centerzipcode": "3",     //中心邮编
+                    "u_projectid": "1",         //项目id
+                    "u_centertime": "2017-05-25",   //创建时间
+                    "u_centercreateuser": "1",      //创建人
+                    "status": "1",              //状态（1正常，2删除）
+                    "count": 3,                 //中心内成员个数
+                    "userarr": [
+                        {
+                            "u_id": "79",       
+                            "u_centerid": "IjurZY3lPW",
+                            "u_userid": "1",    //用户id
+                            "type": "1",        //用户类型（1.中心创建者 2.普通成员）
+                            "s_username": "hjh",//名字
+                            "s_cellphone": "13910111011",//手机号
+                            "s_sex": "2",    //性别
+                            "s_mybirthday": "1999-10-09", //生日
+                            "task": "基线、随访访4、随访、随访访3"   //任务
+                        },
+                
+                }
+            ]
+        }
+    </pre>
+</div>
+<!-- 中心详情 -->
+<div>
+    <p class="block">
+        <a name="centerdetail" id="centerdetail">中心详情</a></p>
+    <p class="url">
+        URL : project/centerdetail<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>中心ID</th>
+            <th>centerid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "中心详情",
+            "data": [
+                {
+                    "u_centerID": "IjurZY3lPW", //中心id
+                    "u_centernum": "3",         //中心编码
+                    "u_centername": "3",        //中心名称
+                    "u_centerlead": "3",        //中心负责人
+                    "u_centeradr": "3",         //中心地址
+                    "u_centerphone": "3",       //中心电话
+                    "u_centeremail": "3",       //中心邮箱
+                    "u_centerzipcode": "3",     //中心邮编
+                    "u_projectid": "1",         //项目id
+                    "u_centertime": "2017-05-25",   //创建时间
+                    "u_centercreateuser": "1",      //创建人
+                    "status": "1",              //状态（1正常，2删除）
+                    "count": 3,                 //中心内成员个数
+                    "userarr": [
+                        {
+                            "u_id": "79",       
+                            "u_centerid": "IjurZY3lPW",
+                            "u_userid": "1",    //用户id
+                            "type": "1",        //用户类型（1.中心创建者 2.普通成员）
+                            "s_username": "hjh",//名字
+                            "s_cellphone": "13910111011",//手机号
+                            "s_sex": "2"    //性别
+                        },
+                
+                }
+            ]
+        }
+    </pre>
+</div>
+<!-- 获取项目参与成员列表 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="getmemberlistbyprojectid">获取项目参与成员列表</a></p>
+    <p class="url">
+        URL : project/getmemberlistbyprojectid<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+            {
+              "code": "succ",
+              "message": "项目成员列表",
+              "data": [
+                {
+                    "u_id": "1",
+                    "u_projectID": "1",         //项目id
+                    "u_userID": "1",            //用户id
+                    "u_permission": "1",        //用户在项目中角色 1.管理员 2.普通成员
+                    "u_createtime": "2017-02-07 16:37:25",  //进项目时间
+                    "s_username": "霍佳慧",        //用户名
+                    "centername": "玩耍中心",       //中心名称
+                    "centerid": "QtZMrilRp6"        //中心id
+                    "task": "随访"        //任务名称
+                }
+              ]
+            }
+    </pre>
+</div>
+
+<!-- 获取中心成员列表 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="getmemberlistbycenterid">获取中心成员列表</a></p>
+    <p class="url">
+        URL : project/getmemberlistbycenterid<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>中心ID</th>
+            <th>centerid</th>
+        </tr>
+
+    </table>
+    <pre>
+    返回数据<br>
+            {
+              "code": "succ",
+              "message": "中心成员列表",
+              "data": [
+                {
+                    "u_id": "81",
+                    "u_centerid": "IjurZY3lPW", //中心id
+                    "u_userid": "140",          //用户id
+                    "type": "2",                //成员类型  1.创建人 2.普通人
+                    "s_username": "赵雷生",        //名字
+                    "s_cellphone": "13501299298",//手机号
+                    "s_sex": "1"                //性别
+                }
+              ]
+            }
+    </pre>
+</div>
+
+<!-- 查找用户 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="finduserinfo">查找用户</a></p>
+    <p class="url">
+        URL : project/finduserinfo<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <!-- <tr>
+            <th>用户ID（操作者）</th>
+            <th>userId</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectId</th>
+        </tr> -->
+        <tr>
+            <th>查找用户姓名</th>
+            <th>nameOrTel</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+          "code": "succ",
+          "message": "用户信息",
+          "data": [
+            {
+              "s_userid": "1",
+              "s_username": "用户姓名",
+              "s_sex": "",
+              "s_workunti": "工作单位",
+              "s_department": "工作科室",
+              "s_mem": "简介",
+              "s_mybirthday": "出生年月"
+            },
+            {
+              "s_userid": "3",
+              "s_username": "asd",
+              "s_sex": "",
+              "s_workunti": "",
+              "s_department": "",
+              "s_mem": "简介",
+              "s_mybirthday": "出生年月"
+            }
+          ]
+        }
+    </pre>
+</div>
+
+<!-- 添加项目成员 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="addprojectmember">添加项目成员</a></p>
+    <p class="url">
+        URL : project/addprojectmember<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（操作者）</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>成员ID</th>
+            <th>memberid</th>
+        </tr>
+        <tr>
+            <th>是否设为管理员（y/n）</th>
+            <th>admin</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "添加成功",
+            "data": "3"
+        }
+    </pre>
+</div>
+
+<!-- 移除项目成员 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="removememberinproject">移除项目成员</a></p>
+    <p class="url">
+        URL : project/removememberinproject<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（操作者）</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>成员ID</th>
+            <th>memberid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "添加成功",
+            "data": "3"
+        }
+    </pre>
+</div>
+
+<!-- 设置管理员 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="membertoadmin">设置管理员</a></p>
+    <p class="url">
+        URL : project/membertoadmin<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（操作者）</th>
+            <th>userId</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectId</th>
+        </tr>
+        <tr>
+            <th>成员ID</th>
+            <th>memberId</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "修改成功",
+            "data": "3"
+        }
+    </pre>
+</div>
+
+<!-- 移除管理员 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="memberremoveadmin">移除管理员</a></p>
+    <p class="url">
+        URL : project/memberremoveadmin<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（操作者）</th>
+            <th>userId</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectId</th>
+        </tr>
+        <tr>
+            <th>成员ID</th>
+            <th>memberId</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "修改成功",
+            "data": "3"
+        }
+    </pre>
+</div>
+
+
+<!-- 为成员分配中心 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="addcentermember">为成员分配中心</a></p>
+    <p class="url">
+        URL : project/addcentermember<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（操作者）</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>中心ID</th>
+            <th>centerid</th>
+        </tr>
+        <tr>
+            <th>成员ID</th>
+            <th>memberid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "添加成功",
+            "data": "3"
+        }
+    </pre>
+</div>
+
+<!-- 从中心移除成员 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="removememberincenter">从中心移除成员（不删除项目成员）</a></p>
+    <p class="url">
+        URL : project/removememberincenter<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID（操作者）</th>
+            <th>userId</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectId</th>
+        </tr>
+        <tr>
+            <th>中心ID</th>
+            <th>centerId</th>
+        </tr>
+        <tr>
+            <th>成员ID</th>
+            <th>memberId</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "添加成功",
+            "data": "3"
+        }
+    </pre>
+</div>
+
+<!-- 创建中心 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="createcenter">创建中心</a></p>
+    <p class="url">
+        URL : project/createcenter<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>中心编号</th>
+            <th>centernum</th>
+        </tr>
+        <tr>
+            <th>中心名称</th>
+            <th>centername</th>
+        </tr>
+        <tr>
+            <th>中心负责人</th>
+            <th>centerlead</th>
+        </tr>
+        <tr>
+            <th>中心地址</th>
+            <th>centeradr</th>
+        </tr>
+        <tr>
+            <th>中心电话</th>
+            <th>centerphone</th>
+        </tr>
+        <tr>
+            <th>中心邮箱</th>
+            <th>centeremail</th>
+        </tr>
+        <tr>
+            <th>中心邮编</th>
+            <th>centerzipcode</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "创建成功",
+            "data": "LZONn8yjnm"
+        }
+    </pre>
+</div>
+
+<!-- 编辑中心 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="editcentermsg">编辑中心</a></p>
+    <p class="url">
+        URL : project/editcentermsg<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>中心编号</th>
+            <th>centernum</th>
+        </tr>
+        <tr>
+            <th>中心名称</th>
+            <th>centername</th>
+        </tr>
+        <tr>
+            <th>中心负责人</th>
+            <th>centerlead</th>
+        </tr>
+        <tr>
+            <th>中心地址</th>
+            <th>centeradr</th>
+        </tr>
+        <tr>
+            <th>中心电话</th>
+            <th>centerphone</th>
+        </tr>
+        <tr>
+            <th>中心邮箱</th>
+            <th>centeremail</th>
+        </tr>
+        <tr>
+            <th>中心邮编</th>
+            <th>centerzipcode</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>中心id</th>
+            <th>centerid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "修改成功",
+            "data": []
+        }
+    </pre>
+
+<!-- 删除分中心 -->
+<div>
+    <p class="block">
+        <a name="getprojects" id="deletecenter">删除分中心</a></p>
+    <p class="url">
+        URL : project/deletecenter<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户ID</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目ID</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>中心ID</th>
+            <th>centerid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "删除成功",
+            "data": []
+        }
+    </pre>
+</div>
+
+
+<!-- 获取项目模板 -->
+<div>
+   <p class="block">
+   <a name="gettemplates" id="gettemplates">获取项目模板</a></p>
+    <p class="url">
+        URL :  project/gettemplates<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "项目模板：",
+            data: [
+            {
+                u_templateid: "3",
+                u_templatename: "用药记录",
+                u_templatedata: "",
+                u_projectid: "1",
+                u_createuser: "",
+                u_createtime: "2017-02-01 00:00:00"
+            },
+            {
+                u_templateid: "4",
+                u_templatename: "既往病史",
+                u_templatedata: "{"code": "succ", "data": {"userid": "1"}, "message": "登录成功"}",
+                u_projectid: "1",
+                u_createuser: "1",
+                u_createtime: "2017-02-07 00:00:00"
+            }
+
+                  ]
+        }
+    </pre>    
+</div>
+
+<!-- 创建模板 -->
+<div>
+   <p class="block">
+   <a name="createtemplate" id="createtemplate">创建模板</a></p>
+    <p class="url">
+        URL :  project/createtemplate<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>模板名称</th>
+            <th>templatename</th>
+        </tr>
+        <tr>
+            <th>模板json数据</th>
+            <th>templatedata</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>创建人id</th>
+            <th>createuser</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            code: "succ",
+            message: "创建成功，模板id：",
+            data: {
+                templateid: 7
+            }
+        }
+    </pre>    
+</div>
+<!--添加项目成员时搜索 -->
+<div>
+   <p class="block">
+   <a name="searchuser" id="searchuser">添加项目成员时搜索</a></p>
+    <p class="url">
+        URL :  project/searchuser<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>手机号</th>
+            <th>mobile</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "用户信息：",
+            "data": {
+                "s_userid": "jO6HWqm3fs",     //
+                "s_username": "豆子",             //
+                "s_workunti": "2",          //工作单位
+                "s_cellphone": "18838696390",
+                "s_department": "2",        //工作科室
+                "type": 2               //1:是好友（这个才可以加成员）；2：不是好友；3：是自己；4：不是用户；5：已经是项目成员
+            }
+        }
+    </pre>    
+</div>
+<!--邀请加入项目 -->
+<div>
+   <p class="block">
+   <a name="inviteprojectuser" id="inviteprojectuser">邀请加入项目</a></p>
+    <p class="url">
+        URL :  project/inviteprojectuser<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>对方id</th>
+            <th>touserid</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "好了",
+            "data": {
+                
+            }
+        }
+    </pre>    
+</div>
+<!--处理项目邀请 -->
+<div>
+   <p class="block">
+   <a name="doapply" id="doapply">处理项目邀请</a></p>
+    <p class="url">
+        URL :  project/doapply<br>
+        类型 : POST
+    </p>
+    <table class="table table-rds">
+        <tr>
+            <th>参数</th>
+            <th>字段</th>
+        </tr>
+        <tr>
+            <th>用户id</th>
+            <th>userid</th>
+        </tr>
+        <tr>
+            <th>项目id</th>
+            <th>projectid</th>
+        </tr>
+        <tr>
+            <th>邀请人id</th>
+            <th>touserid</th>
+        </tr>
+        <tr>
+            <th>处理状态(2:同意；3：拒绝)</th>
+            <th>status</th>
+        </tr>
+    </table>
+    <pre>
+    返回数据<br>
+        {
+            "code": "succ",
+            "message": "好了",
+            "data": {
+                
+            }
+        }
+    </pre>    
+</div>
+</body>

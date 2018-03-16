@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="179px" height="213px" viewBox="0 0 179 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>退回的病例-空</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="6.50406504" y="6.50406504" width="119.674797" height="148.292683" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="119.674797" height="148.292683" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="6.50406504" y="6.50406504" width="119.674797" height="148.292683" rx="3"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="119.674797" height="148.292683" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="34.4715447" y="2.21827976e-13" width="63.7398374" height="18.2113821" rx="3"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="63.7398374" height="18.2113821" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="项目首页-退回的病例-空" transform="translate(-602.000000, -373.000000)">
+            <g id="退回的病例-空" transform="translate(602.000000, 373.000000)">
+                <g id="Group-3" transform="translate(10.000000, 0.000000)">
+                    <rect id="Rectangle-2" fill="#FFFFFF" opacity="0" x="0" y="0" width="160" height="160"></rect>
+                    <g id="Group-2" transform="translate(8.000000, 0.000000)">
+                        <use id="Rectangle-12" stroke-opacity="0.12" stroke="#000000" mask="url(#mask-2)" stroke-width="2" fill-opacity="0.12" fill="#000000" transform="translate(66.341463, 80.650407) rotate(-355.000000) translate(-66.341463, -80.650407) " xlink:href="#path-1"></use>
+                        <use id="Rectangle-12" stroke-opacity="0.12" stroke="#000000" mask="url(#mask-4)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-3"></use>
+                        <rect id="Rectangle-12" fill="#FFFFFF" x="34.4715447" y="2.21827976e-13" width="63.7398374" height="18.2113821" rx="3"></rect>
+                        <use id="Rectangle-12" stroke-opacity="0.12" stroke="#000000" mask="url(#mask-6)" stroke-width="2" fill-opacity="0.12" fill="#000000" xlink:href="#path-5"></use>
+                        <rect id="Rectangle-12-Copy-2" fill-opacity="0.12" fill="#000000" x="20.8130081" y="84.5528455" width="91.0569106" height="5.20325203" rx="2.60162602"></rect>
+                        <rect id="Rectangle-12-Copy-3" fill-opacity="0.12" fill="#000000" x="20.8130081" y="102.764228" width="91.0569106" height="5.20325203" rx="2.60162602"></rect>
+                        <rect id="Rectangle-12-Copy-4" fill-opacity="0.12" fill="#000000" x="20.8130081" y="120.97561" width="52.0325203" height="5.20325203" rx="2.60162602"></rect>
+                        <path d="M61.7886179,46.8292683 L51.7749656,46.8292683 C50.1144223,46.8292683 48.7804878,48.1754493 48.7804878,49.8360478 L48.7804878,52.9281798 C48.7804878,54.5913833 50.1211612,55.9349593 51.7749656,55.9349593 L61.7886179,55.9349593 L61.7886179,65.9486116 C61.7886179,67.6091549 63.1347989,68.9430894 64.7953974,68.9430894 L67.8875294,68.9430894 C69.5507329,68.9430894 70.8943089,67.6024161 70.8943089,65.9486116 L70.8943089,55.9349593 L80.9079612,55.9349593 C82.5685045,55.9349593 83.902439,54.5887783 83.902439,52.9281798 L83.902439,49.8360478 C83.902439,48.1728444 82.5617656,46.8292683 80.9079612,46.8292683 L70.8943089,46.8292683 L70.8943089,36.815616 C70.8943089,35.1550727 69.5481279,33.8211382 67.8875294,33.8211382 L64.7953974,33.8211382 C63.132194,33.8211382 61.7886179,35.1618116 61.7886179,36.815616 L61.7886179,46.8292683 Z" id="Combined-Shape" fill-opacity="0.12" fill="#000000"></path>
+                    </g>
+                    <ellipse id="Oval-3" fill="#FFFFFF" cx="121.170732" cy="130.081301" rx="29.9186992" ry="29.9186992"></ellipse>
+                    <ellipse id="Oval-3" stroke-opacity="0.12" stroke="#000000" fill-opacity="0.12" fill="#000000" cx="120.918699" cy="129.918699" rx="29.9186992" ry="29.9186992"></ellipse>
+                    <path d="M117.16,128.052778 L117.16,121.891394 C117.16,120.991497 116.526731,120.722922 115.745554,121.317023 L105.588484,129.041683 C104.800378,129.641053 104.807307,130.599012 105.588484,131.193113 L115.745554,138.917772 C116.53366,139.517143 117.16,139.254719 117.16,138.343401 L117.16,132.357222 L136.11459,132.357222 C136.654414,132.357222 137.1075,131.910248 137.1075,131.358877 L137.1075,129.051123 C137.1075,128.497216 136.662959,128.052778 136.11459,128.052778 L117.16,128.052778 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                </g>
+                <text id="您还没有被退回的病例" font-family="PingFangSC-Regular, PingFang SC" font-size="18" font-weight="normal" fill-opacity="0.54" fill="#000000">
+                    <tspan x="0" y="211">您还没有被退回的病例</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

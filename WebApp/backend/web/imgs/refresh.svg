@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>刷新</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M13.6485303,2.35 C12.1976235,0.9 10.206379,0 7.99499687,0 C3.57223265,0 0,3.58 0,8 C0,12.42 3.57223265,16 7.99499687,16 C11.7273296,16 14.8392745,13.45 15.7298311,10 L13.6485303,10 C12.8280175,12.33 10.6066291,14 7.99499687,14 C4.68292683,14 1.99124453,11.31 1.99124453,8 C1.99124453,4.69 4.68292683,2 7.99499687,2 C9.65603502,2 11.1369606,2.69 12.217636,3.78 L8.99562226,7 L16,7 L16,0 L13.6485303,2.35 L13.6485303,2.35 Z" id="刷新" fill="#FFFFFF"></path>
+    </g>
+</svg>

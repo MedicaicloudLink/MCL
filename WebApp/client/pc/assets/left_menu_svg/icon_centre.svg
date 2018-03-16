@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.699999988">
+        <g id="首页" transform="translate(-24.000000, -277.000000)">
+            <g id="Group-5" transform="translate(24.000000, 277.000000)">
+                <rect id="Rectangle-4" x="0" y="0" width="16" height="16"></rect>
+                <path d="M5,5 L3.49769878,5 C3.21484375,5 3,5.22385763 3,5.5 C3,5.76806641 3.22282734,6 3.49769878,6 L5,6 L5,7.50230122 C5,7.78515625 5.22385763,8 5.5,8 C5.76806641,8 6,7.77717266 6,7.50230122 L6,6 L7.50230122,6 C7.78515625,6 8,5.77614237 8,5.5 C8,5.23193359 7.77717266,5 7.50230122,5 L6,5 L6,3.49769878 C6,3.21484375 5.77614237,3 5.5,3 C5.23193359,3 5,3.22282734 5,3.49769878 L5,5 Z M0,1.00087166 C0,0.448105505 0.444836974,0 0.995577499,0 L10.0044225,0 C10.5542648,0 11,0.444630861 11,1.00087166 L11,16 L0.995577499,16 C0.445735229,16 0,15.5553691 0,14.9991283 L0,1.00087166 Z M4,12 L7,12 L7,16 L4,16 L4,12 Z M11.5,6 L15.0013041,6 C15.5528686,6 16,6.4556644 16,6.99539757 L16,15.0046024 C16,15.5543453 15.5520711,16 15.0013041,16 L11.5,16 L11.5,6 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

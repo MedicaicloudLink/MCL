@@ -1,0 +1,459 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <link rel='stylesheet' type='text/css' href='prettify.css'>
+    <script type='text/javascript' src='jquery.js'></script>
+    <script type='text/javascript' src='prettify.js'></script>
+    <script type='text/javascript'>$(window).load(function(){ $('pre').addClass('prettyprint');prettyPrint();})</script>
+    <title>login相关</title>
+</head>
+
+<body>
+
+    <!-- 邮箱状态 -->
+    <div>
+        <p class="block">
+            <a name="mailstate" id="mailstate">邮箱状态</a></p>
+        <p class="url">
+            URL : login/mailstate<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "信息",
+                data: [],
+                status:""//状态见下边
+            }
+            1000：缺少参数
+            ----------------------------------
+            1001：邮箱格式错误
+            ----------------------------------
+            1002：未注册,点击邀请链接进入，返回公司信息
+            ----------------------------------
+            1003：链接无效
+            ----------------------------------
+            1004：未注册，未被邀请
+            ----------------------------------
+            1005：注册过，返回公司信息
+            ----------------------------------
+            1006：在邀请名单中,返回公司信息
+            ----------------------------------
+        </pre>
+    </div>
+<!-- 创建企业 -->
+    <div>
+        <p class="block">
+            <a name="createcompany" id="createcompany">创建企业</a></p>
+        <p class="url">
+            URL : company/createcompany<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+            <tr>
+                <th>用户名</th>
+                <th>username</th>
+            </tr>
+            <tr>
+                <th>密码</th>
+                <th>password</th>
+            </tr>
+            <tr>
+                <th>公司名称</th>
+                <th>companyname</th>
+            </tr>
+            <tr>
+                <th>二级域名</th>
+                <th>domain</th>
+            </tr>
+            <tr>
+                <th>城市</th>
+                <th>city</th>
+            </tr>
+            <tr>
+                <th>手机号</th>
+                <th>mobile</th>
+            </tr>
+            <tr>
+                <th>部门</th>
+                <th>department</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "创建成功",
+                data: {
+                    "userid": "p4YHwoNbT0",    //用户id
+                    "companyid": "vDefE3oFip"       //企业id
+                },
+                status:""
+            }
+            ----------------------------------
+            {
+                code: "err",
+                message: "创建失败",
+                data: [],
+                status:""
+            }
+            1050：此邮箱已被注册
+            ----------------------------------
+            1051：在邀请名单中呢
+            ----------------------------------
+            1052：手机号格式不对
+            ----------------------------------
+            1053：二级域名被占用
+            ----------------------------------
+            1055：创建失败
+        </pre>
+    </div>
+    <!-- 创建企用户-->
+    <div>
+        <p class="block">
+            <a name="createuser" id="createuser">创建用户</a></p>
+        <p class="url">
+            URL : company/createuser<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+            <tr>
+                <th>用户名</th>
+                <th>name</th>
+            </tr>
+            <tr>
+                <th>密码</th>
+                <th>password</th>
+            </tr>
+            <tr>
+                <th>企业id</th>
+                <th>companyid</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "创建成功",
+                data: {
+                    "mail": "jiahui_huo@medicayun.cn",
+                    "name": "加加",
+                    "companyid": "WmAEPGIs26",
+                    "userid": "Tne2bV4mhM"
+                },
+                status:""
+            }
+            ----------------------------------
+            {
+                code: "err",
+                message: "创建失败",
+                data: [],
+                status:""
+            }
+            1111：此邮箱已被注册
+        </pre>
+    </div>
+    <!-- 邀请同事 -->
+    <div>
+        <p class="block">
+            <a name="invitewoker" id="invitewoker">邀请同事</a></p>
+        <p class="url">
+            URL : company/invitewoker<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>用户id</th>
+                <th>userid</th>
+            </tr>
+            <tr>
+                <th>企业id</th>
+                <th>companyid</th>
+            </tr>
+            <tr>
+                <th>邀请信息</th>
+                <th>inviteinfo<font color='red'>(json类型),类似：[{"name": "小黑","mail": "jiahui_huo@medicayun.cn"},{"name": "小白","mail": "****@qq.com"}]</font></th>
+            </tr>
+            
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "邀请成功",
+                data: {
+                    "count": "2",    //邀请成功的个数
+                },
+                status:""
+            }
+            ----------------------------------
+            {
+                code: "err",
+                message: "邀请失败",
+                data: [],
+                status:""
+            }
+        </pre>
+    </div>
+        <!-- 注册发送邮件 -->
+    <div>
+        <p class="block">
+            <a name="sendregistmail" id="sendregistmail">注册发送邮件</a></p>
+        <p class="url">
+            URL : login/sendregistmail<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "发送成功",
+                data: {
+                },
+                status:""
+            }
+        </pre>
+    </div>
+            <!-- 忘记密码的邮箱状态 -->
+    <div>
+        <p class="block">
+            <a name="forgetpasswdmail" id="forgetpasswdmail">忘记密码的邮箱状态</a></p>
+        <p class="url">
+            URL : login/forgetpasswdmail<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "正常",
+                data: {
+                    'mail':'sss@123.com',
+                },
+                status:""
+            }
+            -----------------------
+            {
+                code: "err",
+                message: "不存在",
+                data: {
+                },
+                status:""
+            }
+        </pre>
+    </div>
+                <!-- 忘记密码发送邮箱验证 -->
+    <div>
+        <p class="block">
+            <a name="sendforgetpasswd" id="sendforgetpasswd">忘记密码发送邮箱验证</a></p>
+        <p class="url">
+            URL : login/sendforgetpasswd<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                code: "succ",
+                message: "发送成功",
+                data: {
+                    'mail':'sss@123.com',
+                },
+                status:""
+            }
+        </pre>
+    </div>
+      <!-- 重置密码 -->
+    <div>
+        <p class="block">
+            <a name="setpasswd" id="setpasswd">重置密码</a></p>
+        <p class="url">
+            URL : login/setpasswd<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+            <tr>
+                <th>密码</th>
+                <th>password</th>
+            </tr>
+            <tr>
+                <th>第二次输入的密码</th>
+                <th>repassword</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "succ",
+                "message": "重置成功",
+                "data": {
+                    "mail": "aaa@qw.com"
+                },
+                "status": ""
+            }
+            ---------------------------------
+            {
+                "code": "err",
+                "message": "重置失败",
+                "data": [],
+                "status": 
+            }
+            ----------------------------------
+            1300：还没有注册
+            ----------------------------------
+            1301：两次密码不一致
+        </pre>
+    </div>
+                    <!-- 邮箱登录 -->
+    <div>
+        <p class="block">
+            <a name="emaillogin" id="emaillogin">邮箱登录</a></p>
+        <p class="url">
+            URL : login/emaillogin<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>邮箱</th>
+                <th>mail</th>
+            </tr>
+            <tr>
+                <th>密码</th>
+                <th>password</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "succ",
+                "message": "登录成功",
+                "data": {
+                    "userid": "Tne2bV4mhM",
+                    "token": "TQq/kkoBlAPOA2teefJ4g4aPi3zm5cA5gDUXZBp0MGA="
+                },
+                "status": ""
+            }
+            ---------------------------------
+            {
+                "code": "err",
+                "message": "登录失败,密码错误",
+                "data": [],
+                "status": 1202
+            }
+            ----------------------------------
+            1200：还没有注册
+            ----------------------------------
+            1201：企业没这个人
+        </pre>
+    </div>
+     <!-- 二级域名是否被占用 -->
+    <div>
+        <p class="block">
+            <a name="domainstate" id="domainstate">二级域名是否被占用</a></p>
+        <p class="url">
+            URL : company/domainstate<br>
+            类型 : POST
+        </p>
+        <table class="table table-rds">
+            <tr>
+                <th>参数</th>
+                <th>字段</th>
+            </tr>
+            <tr>
+                <th>域名</th>
+                <th>domain</th>
+            </tr>
+        </table>
+        <pre>
+        返回数据<br>
+            {
+                "code": "succ",
+                "message": "可以用",
+                "data": {
+                },
+                "status": ""
+            }
+            ---------------------------------
+            {
+                "code": "err",
+                "message": "被占用",
+                "data": [],
+                "status": 1053
+            }
+        </pre>
+    </div>
+</body>

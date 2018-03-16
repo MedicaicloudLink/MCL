@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>02</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-100.000000, -880.000000)">
+            <g id="02" transform="translate(100.000000, 880.000000)">
+                <circle id="Oval-Copy" stroke-opacity="0.12" stroke="#458DF1" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <circle id="Oval-3" stroke="#458DF1" stroke-width="4" cx="73" cy="67" r="13"></circle>
+                <path d="M92.2101884,87 C87.6243154,81.5000243 80.7208949,78 73,78 C59.1928813,78 48,89.1928813 48,103 L52,103 C52,91.4020203 61.4020203,82 73,82 C78.0822146,82 82.8627882,83.8129382 86.6042406,87 L92.2101967,87 Z" id="Combined-Shape" fill="#458DF1" fill-rule="nonzero"></path>
+                <path d="M99,86 L99,92.5925666 L75,92.5925666 L75,98.5922993 L99,98.5922993 L99,105.184927 L109.962815,95.5924635 L99,86 Z" id="Combined-Shape" stroke="#458DF1" stroke-width="4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

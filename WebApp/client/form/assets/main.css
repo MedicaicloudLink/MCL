@@ -1,0 +1,162 @@
+*{margin: 0; padding: 0;-webkit-padding-start: 0px;}
+html, body {
+  font-size: 14px;
+  width: 100%;
+  background: #eee;
+	font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+
+input, textarea, select {
+	font-family: "Lucida Grande", Lucida Sans Unicode, Hiragino Sans GB, WenQuanYi Micro Hei, Verdana, Aril, sans-serif;
+}
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+textarea {
+	resize: none;
+	line-height: 1.3;
+}
+
+ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.mu-text-field {
+  min-height: 32px;
+}
+
+.mu-text-field-content {
+  padding-bottom: 0 !important;
+}
+
+.dec {
+  font-size: 12px;
+  color: #999;
+}
+
+.hint-text {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  color: #999;
+  border-bottom: 1px dashed #ddd;
+}
+
+.add-option {
+  display: flex;
+  color: #458df1;
+  width: 180px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.add-option .checkbox-icon, .add-option .dropdown-icon, .add-option .radio-icon {
+  margin-top: 0;
+}
+
+
+
+.c-gray {
+  color: #999;
+}
+
+.center {
+  text-align: center;
+}
+
+.img-option {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.2);
+  max-width: 180px;
+  max-height: 120px;
+}
+
+.upload-content {
+  margin: 50px 0;
+}
+
+.upload-content p{
+  padding-bottom: 12px;
+}
+.upload-img {
+  position: relative;
+}
+.upload-img input {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  width:100%;
+  height:100%;
+}
+
+.upload-img {
+  padding: 8px 15px;
+  background: #458df1;
+  color: #fff;
+  display: inline-block;
+}
+
+/*特定样式*/
+
+/*问题类型选择下拉框*/
+#editor-items .q .select .input-form {
+  padding-left: 20px;
+}
+
+#editor-items .q .select .input-form input, #editor-items .q .select .input-form textarea {
+  border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+#editor-items .q .select .input-form .arrow-bottom {
+  border-top-color: #aaa;
+}
+
+#editor-items .questions.active .a-item input[type="text"], .section.active .a-item input[type="text"] {
+  border-color: rgba(0,0,0,0);
+}
+
+#editor-items .questions.active .a-item input[type="text"]:hover, .section.active .a-item input[type="text"]:hover {
+  border-color: rgba(0,0,0,.12);
+}
+
+#editor-items .questions.active .a-item textarea, .section.active .a-item textarea {
+  border-color: rgba(0,0,0,0);
+}
+
+#editor-items .questions.active .a-item textarea:hover, .section.active .a-item textarea:hover {
+  border-color: rgba(0,0,0,.12);
+}
+
+/*select组件下的input选中下划线都显示*/
+#editor-items .a-item .select input[type="text"] {
+  border-bottom-color: rgba(0,0,0,0);
+}
+
+#editor-items .questions.active .a-item .select input[type="text"] {
+  border-bottom-color: rgba(0,0,0,0.12) !important;
+}
+
+/* 表单输入全部居中 */
+.form textarea{
+  text-align: center;
+  border: none;
+}

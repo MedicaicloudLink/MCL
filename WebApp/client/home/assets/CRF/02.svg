@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>02</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy-6" transform="translate(-100.000000, -880.000000)">
+            <g id="02" transform="translate(100.000000, 880.000000)">
+                <circle id="Oval-Copy" stroke-opacity="0.12" stroke="#458DF1" stroke-width="8" cx="80" cy="80" r="76"></circle>
+                <path d="M106.8,65 L69,101 C75.8674075,101 78.4087957,101 93.3027054,101 L94.1196019,101 L101.462481,108.199457 L102.418624,101 L110,101 L110,65 C108.03715,65 107.64458,65 106.77429,65 L106.8,65 Z" id="Combined-Shape" stroke="#458DF1" stroke-width="4"></path>
+                <path d="M106,67 L106,63 L63,63 L63,99 L106,99 L106,83.4857929 L108,83.4857929 L108,67 L106,67 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                <path d="M58.5375194,93.1994574 L65.8803981,86 L100,86 L100,50 L50,50 L50,86 L55.8294306,86 L57.581376,86 L58.5375194,93.1994574 Z" id="Combined-Shape" stroke="#458DF1" stroke-width="4"></path>
+                <text id="？" font-family="PingFangSC-Semibold, PingFang SC" font-size="24" font-weight="500" fill="#458DF1">
+                    <tspan x="69" y="77">？</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
